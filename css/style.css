@@ -1,0 +1,195 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  /*sets font for whole page*/
+}
+
+body {
+  margin: 0;
+  margin-top: 50px;
+}
+
+header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 55px;
+  line-height: 50px;
+  background-image: url(/images/green-bg.jpg);
+  /*border: 1px solid black;*/
+  z-index: 1;
+}
+
+header * {
+  display: inline;
+  height: 50px;
+}
+
+header ul {
+  padding: 0;
+}
+
+header li {
+  margin-left: 20px;
+}
+
+section {
+  height: 100vh;
+  /*border: 1px solid black*/
+  border: purple solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#hero {
+  line-height: 80vh;
+  background-image: url(/images/amydrums1.JPG);
+  background-size: cover;
+  background-position: center;
+
+}
+
+.section-inner {
+  border: red solid;
+  position: relative;
+}
+
+.amyo {
+  padding: 0vh;
+  width: 100px;
+  height: 75px;
+}
+
+
+header a {
+  text-decoration: none;
+  /* removes underline from nav links */
+}
+
+
+/*========= styling for website border ===========*/
+#top,
+#bottom,
+#left,
+#right {
+  background: url(/images/green-bg.jpg);
+  position: fixed;
+  z-index: 100;
+}
+
+#left,
+#right {
+  top: 0;
+  bottom: 0;
+  width: 15px;
+}
+
+#left {
+  left: 0;
+}
+
+#right {
+  right: 0;
+}
+
+#top,
+#bottom {
+  left: 0;
+  right: 0;
+  height: 15px;
+}
+
+#top {
+  top: 0;
+}
+
+#bottom {
+  bottom: 0;
+}
+
+/*==========================================*/
+
+#about {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(/images/IMG_1762.JPG);
+}
+
+.myVideo {
+  object-fit:fill;
+  left: 25px;
+}
+
+#programming {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(/images/IMG_1757.JPG);
+}
+
+#events {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(/images/IMG_1764.JPG);
+}
+
+#contact {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(/images/IMG_1759.JPG);
+}
+
+#videos{
+  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75));
+}
+
+#about,
+#programming,
+#events,
+#contact {
+  background-size: cover;
+  background-position: center;
+}
+
+
+.speech-bubble {
+  position: relative;
+  bottom: 30vh;
+  left: 1vw;
+  z-index: 0;
+}
+
+.section-inner-video{
+  border: rgb(253, 93, 128) solid;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  
+}
+
+
+.video-content{
+  border: blue solid;
+  display: flex; /* NEW */
+  width: 100%;
+  background-color: red;
+}
+
+
+#programming{
+  display:grid;
+  grid-template-columns: 200px 200px;
+  grid-row: auto auto;
+  gap: 5px 5px;
+}
+
+#preview{
+  background-color:#333;
+  padding:20px;
+  border-radius:10px;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:40px;
+  font-family:sans-serif;
+}
+
+video{
+  width: 100%;
+}
