@@ -3,9 +3,16 @@ html {
   /*sets font for whole page*/
 }
 
-body {
+* {
+  padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /*margin: 0;
   margin-top: 50px;
+*/
 }
 
 header {
@@ -14,30 +21,127 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  height: 55px;
+  height: 50px;
   line-height: 50px;
   background-image: url(/images/green-bg.jpg);
   /*border: 1px solid black;*/
   z-index: 1;
+  justify-content: space-between;
 }
 
 header * {
-  display: inline;
+  /*display: inline;*/
   height: 50px;
+  color: black;
 }
 
 header ul {
-  padding: 0;
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-right: 15px;
 }
 
 header li {
   margin-left: 20px;
 }
 
+/* ========== hamburger menu for mobile view ===========*/
+
+#hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+}
+
+#hamburger-icon div {
+  width: 35px;
+  height: 3px;
+  background-color: black;
+  margin: 6px 0;
+  transition: 0.4s;
+  /*z-index: 101;*/
+}
+
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6pxm 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: calc(100vh - 50px);
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  header nav {
+    display: none;
+  }
+
+  #hamburger-icon {
+    display: block;
+  }
+}
+
+/* ======================================*/
+
+.section-inner{
+  /*border: red solid;*/
+  display: flex;
+}
+#bio-bg p{
+}
+
+
+.section-inner-bio{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-basis: 75%;
+  border: red solid;
+}
+
+.bio-img-wrapper{
+  min-width: 0;
+  border: greenyellow solid;
+}
+
+#bio-bg p{
+display: block;
+border: blue solid;
+}
+
+.bio-img-wrapper img{
+  height: 80%;
+}
+
 section {
   height: 100vh;
   /*border: 1px solid black*/
-  border: purple solid;
+  /*border: blueviolet solid;*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,9 +156,14 @@ section {
 
 }
 
-.section-inner {
-  border: red solid;
-  position: relative;
+
+#bubble-speech {
+  position: absolute;
+  float: bottom;
+  width: 25%;
+  height: auto;
+  top: 0px;
+  z-index: 1;
 }
 
 .amyo {
@@ -77,7 +186,7 @@ header a {
 #right {
   background: url(/images/green-bg.jpg);
   position: fixed;
-  z-index: 100;
+  z-index: 2;
 }
 
 #left,
@@ -112,84 +221,84 @@ header a {
 
 /*==========================================*/
 
-#about {
+#drumming-bg,
+#music-bg,
+#loops-bg,
+#programming-bg,
+#bio-bg {
+  display: flex;
+  flex-wrap: wrap;
+  background-size: cover;
+  background-position: center;
+  border: purple solid;
+}
+
+#drumming-bg{
   background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(/images/IMG_1762.JPG);
 }
 
-.myVideo {
-  object-fit:fill;
-  left: 25px;
-}
-
-#programming {
+#music-bg{
   background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(/images/IMG_1757.JPG);
 }
 
-#events {
+#loops-bg{
   background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(/images/IMG_1764.JPG);
 }
 
-#contact {
+#programming-bg{
   background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(/images/IMG_1759.JPG);
 }
 
-#videos{
-  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75));
-}
-
-#about,
-#programming,
-#events,
-#contact {
-  background-size: cover;
-  background-position: center;
+#bio-bg{
+  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(/images/IMG_1768.JPG);
 }
 
 
-.speech-bubble {
-  position: relative;
-  bottom: 30vh;
-  left: 1vw;
-  z-index: 0;
-}
-
-.section-inner-video{
-  border: rgb(253, 93, 128) solid;
-  padding: 10px;
+/* ========== Programming preview grid ==========*/
+.row {
   display: flex;
-  flex-direction: column;
-  max-height: 300px;
-  
+  flex-wrap: wrap;
+  padding: 0 4px;
 }
 
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%; /* specifies how much the item will grow relative to the rest of the flexible items inside the same container. */
+  max-width: 100%;
+  padding: 0 4px;
+}
 
-.video-content{
-  border: blue solid;
-  display: flex; /* NEW */
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
   width: 100%;
-  background-color: red;
 }
 
-
-#programming{
-  display:grid;
-  grid-template-columns: 200px 200px;
-  grid-row: auto auto;
-  gap: 5px 5px;
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
 }
 
-#preview{
-  background-color:#333;
-  padding:20px;
-  border-radius:10px;
-  color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:40px;
-  font-family:sans-serif;
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
+/*=========== End of Programming preview grid ============ */
 
-video{
-  width: 100%;
+#preview {
+  background-color: darkgray;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-family: sans-serif;
 }
