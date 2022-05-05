@@ -9,10 +9,8 @@ html {
   box-sizing: border-box;
 }
 
-body {
-  /*margin: 0;
-  margin-top: 50px;
-*/
+header a {
+  text-decoration: none; /* removes underline from nav links */
 }
 
 header {
@@ -24,13 +22,10 @@ header {
   height: 50px;
   line-height: 50px;
   background-image: url(/images/green-bg.jpg);
-  /*border: 1px solid black;*/
-  z-index: 1;
   justify-content: space-between;
 }
 
 header * {
-  /*display: inline;*/
   height: 50px;
   color: black;
 }
@@ -39,7 +34,6 @@ header ul {
   list-style: none;
   height: 100%;
   display: flex;
-  align-items: center;
   justify-content: space-around;
   padding-right: 15px;
 }
@@ -60,9 +54,8 @@ header li {
   width: 35px;
   height: 3px;
   background-color: black;
-  margin: 6px 0;
+  margin: 10px;
   transition: 0.4s;
-  /*z-index: 101;*/
 }
 
 
@@ -96,23 +89,22 @@ header li {
   width: 100%;
 }
 
-@media only screen and (max-width: 600px) {
+/* when screen width is < 600px, nav vanishes and ham menu shown instead */
+
+  @media only screen and (max-width: 600px) {
   header nav {
     display: none;
   }
-
   #hamburger-icon {
     display: block;
   }
 }
 
-/* ======================================*/
+/* =======================================================*/
 
 .section-inner{
   /*border: red solid;*/
   display: flex;
-}
-#bio-bg p{
 }
 
 
@@ -140,8 +132,6 @@ border: blue solid;
 
 section {
   height: 100vh;
-  /*border: 1px solid black*/
-  /*border: blueviolet solid;*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,16 +146,6 @@ section {
 
 }
 
-
-#bubble-speech {
-  position: absolute;
-  float: bottom;
-  width: 25%;
-  height: auto;
-  top: 0px;
-  z-index: 1;
-}
-
 .amyo {
   padding: 0vh;
   width: 100px;
@@ -173,20 +153,13 @@ section {
 }
 
 
-header a {
-  text-decoration: none;
-  /* removes underline from nav links */
-}
-
-
-/*========= styling for website border ===========*/
+/*========= website border ===========*/
 #top,
 #bottom,
 #left,
 #right {
   background: url(/images/green-bg.jpg);
   position: fixed;
-  z-index: 2;
 }
 
 #left,
@@ -253,52 +226,3 @@ header a {
   background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(/images/IMG_1768.JPG);
 }
 
-
-/* ========== Programming preview grid ==========*/
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
-
-/* Create four equal columns that sits next to each other */
-.column {
-  flex: 25%; /* specifies how much the item will grow relative to the rest of the flexible items inside the same container. */
-  max-width: 100%;
-  padding: 0 4px;
-}
-
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
-}
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
-}
-/*=========== End of Programming preview grid ============ */
-
-#preview {
-  background-color: darkgray;
-  padding: 20px;
-  border-radius: 10px;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 40px;
-  font-family: sans-serif;
-}
