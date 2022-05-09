@@ -48,6 +48,7 @@ header li {
   margin: auto 0;
   display: none;
   cursor: pointer;
+  
 }
 
 #hamburger-icon div {
@@ -56,6 +57,7 @@ header li {
   background-color: black;
   margin: 10px;
   transition: 0.4s;
+  
 }
 
 
@@ -89,11 +91,13 @@ header li {
   width: 100%;
 }
 
+
 /* when screen width is < 600px, nav vanishes and ham menu shown instead */
 
   @media only screen and (max-width: 600px) {
   header nav {
     display: none;
+
   }
   #hamburger-icon {
     display: block;
@@ -150,6 +154,7 @@ section {
   padding: 0vh;
   width: 100px;
   height: 75px;
+  /*find way to have logo on top of mobile menu*/
 }
 
 
