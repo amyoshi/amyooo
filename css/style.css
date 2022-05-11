@@ -92,9 +92,9 @@ header li {
 }
 
 
-/* when screen width is < 600px, nav vanishes and ham menu shown instead */
+/* when screen width is < 1024px, nav vanishes and hamburger menu shown instead */
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1024px) {
   header nav {
     display: none;
 
