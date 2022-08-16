@@ -1,5 +1,5 @@
 /* always work from the outside in */
-:root{
+:root {
   --background: url(/images/green-bg.jpg);
 }
 
@@ -42,7 +42,7 @@ header li {
   margin-left: 20px;
 }
 
-nav{  
+nav {
   width: 100%;
   height: 50%;
   text-align: left;
@@ -50,53 +50,50 @@ nav{
   left: 0;
 }
 
-nav ul{
+nav ul {
   margin: 0;
   padding: 2vh;
 }
 
-nav li{
+nav li {
   margin-bottom: 1em;
   margin-left: 1em;
   color: var(--background);
 }
 
-nav a{
-  text-transform: uppercase;  
+nav a {
+  text-transform: uppercase;
 }
 
-nav a:hover{
+nav a:hover {
   color: white;
 }
 
-#amyo{
- display: inline;
- height: 50%;
+#amyo {
+  display: inline;
+  height: 50%;
 }
 
 
-a:visited{
+a:visited {
   color: #000000;
 }
+
 /* ========== hamburger menu for mobile view ===========*/
 
 #hamburger-icon {
   height: 100%;
-  margin: auto 0;
+  margin: 15px;
   display: none;
   cursor: pointer;
 }
 
 #hamburger-icon div {
-  width: 35px;
-  height: 3px;
+  width: 46px;
+  height: 4px;
   background-color: black;
-  margin: 6px 0;
+  margin: 6px;
   transition: 0.4s;
-}
-
-.bar1, .bar2, .bar3{
-  z-index: 99999;
 }
 
 .open .bar1 {
@@ -127,20 +124,21 @@ a:visited{
   left: 0;
   height: calc(100vh - 50px);
   width: 100%;
-  z-index: -1; /* keeps logo on top */
+  z-index: -1;
+  /* keeps logo on top */
 }
 
-.mobile-menu li{
+.mobile-menu li {
   margin-bottom: 10px;
-  font-size: 30px;
+  font-size: 60px;
 }
 
-.mobile-menu a:hover{
+.mobile-menu a:hover {
   color: white;
 }
 
-#computer{
-  width: 60vw;
+#computer {
+  width: 40vw;
 }
 
 
@@ -154,14 +152,18 @@ a:visited{
 
   #hamburger-icon {
     display: block;
-    
+
   }
 
-   .mobile-menu{
+  .mobile-menu {
     background: var(--background);
-    
+
   }
 
+}
+
+main{
+  width: 100%;
 }
 
 /* scrollbar */
@@ -188,24 +190,25 @@ body::-webkit-scrollbar-thumb {
 
 /*----------*/
 
-body{
+body {
   display: flex;
   border: red solid;
 }
 
 /* =======================================================*/
 
-.section-inner, .section-inner-bio {
+.section-inner,
+.section-inner-bio {
   border: red solid;
-  display: inline-flex;
+  display: flex;
   justify-content: center;
 }
 
-.section-inner-bio{
+.section-inner-bio {
   flex: 1;
 }
 
-#bio-container{
+#bio-container {
   display: flex;
   flex-wrap: wrap;
   flex-basis: 10px;
@@ -269,7 +272,7 @@ section {
 
 #top {
   top: 0;
-  height: 5em; 
+  height: 5em;
 }
 
 #bottom {
@@ -286,11 +289,9 @@ section {
 #photos-bg {
   display: flex;
   object-fit: fill;
-  flex-wrap: wrap;
   background-size: cover;
   background-position: center;
-  border: purple solid;
-
+  border: rgb(131, 255, 6) solid;
 }
 
 #drumming-bg {
@@ -313,11 +314,11 @@ section {
   background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(/images/IMG_1768.JPG);
 }
 
-#photos-bg{
+#photos-bg {
   background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(/images/Imagen7.jpg);
- }
-  
+}
 
-.vids-wrapper{
+
+.vids-wrapper {
   display: grid;
 }
