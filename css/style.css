@@ -14,76 +14,87 @@ html {
   /*sets font for whole page*/
 }
 
-header a {
-  text-decoration: none;
+html, body{
+  width: 100%;
+	height: 100%;
 }
 
 header {
   display: flex;
-  position: fixed;
-  justify-content: space-between;
-  text-align: center;
-  top: 5;
-  left: 0;
-  right: 0;
-  height: 25%;
-}
-
-header ul {
-  list-style: none;
-  height: 100%;
-  display: flex;
-  justify-content: space-around;
-  padding-right: 15px;
-  color: black;
-}
-
-header li {
-  margin-left: 20px;
-}
-
-nav {
+  position: fixed;  
   width: 100%;
-  height: 50%;
-  text-align: left;
-  top: 0;
-  left: 0;
 }
 
-nav ul {
+nav{
+  width: 100%;
+}
+
+#main-menu{
+  position: relative;
+}
+
+.main-menu-inner{
+  width: 100%;
+}
+
+.logo{
+width: 300px;
+height: 300px;
+position: absolute;
+left: 50%;
+top: 0;
+content: "";
+margin-left: -150px;
+text-align: center;
+}
+
+.main-menu-inner{
+margin: 0;
+padding: 0;
+width: 100%
+}
+
+.main-menu-inner ul{
   margin: 0;
-  padding: 2vh;
+  padding: 0;
+  list-style: none;
+  text-align: right;
 }
 
-nav li {
-  margin-bottom: 1em;
-  margin-left: 1em;
-  color: var(--background);
+.main-menu-inner ul li{
+float: none;
+display: inline-block;
 }
 
-nav a {
-  text-transform: uppercase;
+.main-menu-inner ul li:nth-child(1){
+  float: left;
 }
 
-nav a:hover {
+.main-menu-inner ul li:nth-child(2){
+  float: left;
+}
+.main-menu-inner ul li:nth-child(3){
+  float: left;
+}
+
+.main-menu-inner ul li a{
+text-transform: uppercase;
+font-size: 20px;
+text-decoration: none;
+display: block;
+padding: 65px 30px;
+}
+
+.main-menu-inner ul li a:hover{
   color: white;
-}
-
-#amyo {
-  display: inline;
-  height: 50%;
-}
-
-
-a:visited {
-  color: #000000;
 }
 
 /* ========== hamburger menu for mobile view ===========*/
 
 #hamburger-icon {
-  height: 100%;
-  margin: 15px;
+  position: fixed;
+  right: 25px;
+  top: 10vh;
   display: none;
   cursor: pointer;
 }
@@ -119,8 +130,8 @@ a:visited {
 
 .mobile-menu {
   display: none;
-  position: absolute;
-  top: 50px;
+  position: fixed;
+  top: 0px;
   left: 0;
   height: calc(100vh - 50px);
   width: 100%;
@@ -131,6 +142,9 @@ a:visited {
 .mobile-menu li {
   margin-bottom: 10px;
   font-size: 60px;
+  line-height: 10vh;
+  height: 100%;
+  list-style: none;
 }
 
 .mobile-menu a:hover {
@@ -145,21 +159,18 @@ a:visited {
 /* when screen width is < 1000px, nav vanishes and hamburger menu shown instead */
 
 @media only screen and (max-width: 1000px) {
-  header nav {
+  .main-menu-inner ul li a {
     display: none;
-
   }
 
   #hamburger-icon {
     display: block;
-
   }
 
   .mobile-menu {
     background: var(--background);
-
+    height: 100%;
   }
-
 }
 
 main{
@@ -197,29 +208,20 @@ body {
 
 /* =======================================================*/
 
-.section-inner,
-.section-inner-bio {
+.section-inner{
   border: red solid;
   display: flex;
   justify-content: center;
 }
 
-.section-inner-bio {
-  flex: 1;
+.section-inner-bio{
+  text-align: justify;
+
 }
 
-#bio-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-basis: 10px;
-  padding: 10px;
-  border: blue solid;
-  flex-grow: 2;
-  white-space: pre-line;
-}
-
-#bio-img-container {
-  height: fit-content;
+.section-inner-bio img{
+  display: block;
+  margin: 0 auto;
 }
 
 section {
@@ -231,11 +233,12 @@ section {
 }
 
 #hero {
-  line-height: 80vh;
   background-image: url(/images/amydrums1.JPG);
   background-size: cover;
   background-position: center;
-
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
 }
 
 
@@ -272,7 +275,7 @@ section {
 
 #top {
   top: 0;
-  height: 5em;
+  height: 25vh;
 }
 
 #bottom {
@@ -287,8 +290,6 @@ section {
 #programming-bg,
 #bio-bg,
 #photos-bg {
-  display: flex;
-  object-fit: fill;
   background-size: cover;
   background-position: center;
   border: rgb(131, 255, 6) solid;

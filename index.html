@@ -16,23 +16,29 @@
   <div id="top"></div>
   <div id="bottom"></div>
   <header>
-    <a href="#"><img src="/images/amyologogreen.png" id="amyo"></a>
     <nav>
-      <ul>
-        <li><a href="#drumming-bg">drumming</a></li>
-        <li><a href="#music-bg">music</a></li>
-        <li><a href="#loops-bg">loops</a></li>
-        <li><a href="#programming-bg">programming</a></li>
-        <li><a href="#bio-bg">bio</a></li>
-        <li><a href="#photos-bg">photos</a></li>
-      </ul>
+      <div id="main-menu">
+        <div class="logo">
+          <a href="#"><img src="/images/amyologogreen.png"></a>
+        </div>
+        <div class="main-menu-inner">
+          <ul>
+            <li><a href="#drumming-bg">drumming</a></li>
+            <li><a href="#music-bg">music</a></li>
+            <li><a href="#loops-bg">loops</a></li>
+            <li><a href="#programming-bg">programming</a></li>
+            <li><a href="#bio-bg">bio</a></li>
+            <li><a href="#photos-bg">photos</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
     <!---- Hamburger menu overlay ----->
 
 
     <!---------------------- Hamburger menu -------------------------->
-    <div id="hamburger-icon" onclick="toggleMobileMenu(this); toggleLogo()";>
+    <div id="hamburger-icon" onclick="toggleMobileMenu(this); toggleLogo()" ;>
       <div class="bar1"></div>
       <div class="bar2"></div>
       <div class="bar3"></div>
@@ -56,44 +62,45 @@
     <!------------------ Drumming section ---------------------->
     <section id="drumming-bg">
       <div class="section-inner">
-        <div class="vids-wrapper">
-          <video width="320" height="240" controls>
-            <source src="/video/IMG_3452.mp4">
-          </video>
-          <video width="320" height="240" controls>
-            <source src="/video/IMG_8815.MOV">
-          </video>
-          <video width="320" height="240" controls>
-            <source src="/video/somethinuglyclip.mp4">
-          </video>
-          <video width="320" height="240" controls>
-            <source src="/video/72271465_2409198169363421_2818312108502405334_n.mp4">
-          </video>
-        </div>
+        <!-- <iframe width="1362" height="913" src="https://www.youtube.com/embed/ddSOvCFi5NY" title="performing on stage feels so juicy (◠﹏◠)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
       </div>
     </section>
     <!-------------------- Music section ----------------------->
     <section id="music-bg">
       <div class="section-inner">
+        <div class="title">Amy O's Demo</div>
         <a href="https://distrokid.com/hyperfollow/amyo/amy-os-demo">
-          <img alt="Amy O's Demo" src="/images/ab67616d0000b27351f80b6773fb2fac48b9b74f.jpeg" width=500" height="500"></a>
-
-          <audio controls>
-            <source src="/audio/13 Vices - Real Like You (demo).mp3" type="audio/mpeg">
-          </audio>
+          <img alt="Amy O's Demo" src="/images/ab67616d0000b27351f80b6773fb2fac48b9b74f.jpeg" width=500"
+            height="500"></a>
+        <a class="button" href="https://distrokid.com/hyperfollow/amyo/amy-os-demo">Listen Now</a>
+        <div class="title">RARE! 13 Vices - Real Like You</div>
+        <audio controls>
+          <source src="/audio/13 Vices - Real Like You (demo).mp3" type="audio/mpeg">
+        </audio>
       </div>
     </section>
     <!-------------------- Loops section ----------------------->
     <section id="loops-bg">
       <div class="section-inner">
-        <h2>Loops / YT channel goes here</h2>
+        <script src="https://apis.google.com/js/platform.js"></script>
+
+        <div class="g-ytsubscribe" data-channelid="UCjXIp2cmMXb2KM3kVlFB_bA" data-layout="full" data-count="default">
+        </div>
+        <script src="https://apis.google.com/js/platform.js"></script>
+
+        <div class="g-ytsubscribe" data-channelid="UCVbWbWqSnHVwrO4hjVvGoEQ" data-layout="full" data-count="default">
+        </div>
+        <script src="https://apis.google.com/js/platform.js"></script>
+
+        <div class="g-ytsubscribe" data-channelid="UCK7qwmqQ0YCK5SeVFQ4oJbw" data-layout="full" data-count="default">
+        </div>
       </div>
     </section>
     <!----------------- Programming section -------------------->
     <section id="programming-bg">
       <div class="section-inner">
         <a href="https://github.com/amyoshi">
-        <img id = "computer" src="/images/1480688.png"></a>
+          <img id="computer" src="/images/1480688.png"></a>
         <h1>Click the computer to check out my GitHub</h1>
       </div>
     </section>
@@ -101,16 +108,14 @@
     <!--------------------- Bio section ----------------------->
     <section id="bio-bg">
       <div class="section-inner-bio">
-        <div id="bio-container">
-          <h3>Amy O is a drummer, skateboarder, video editor, event organizer, programmer (this site was developed by
-            yours truly!) from Dallas, TX, and based out of Atlanta. Amy O is passionate about creating judgement free,
-            inclusive spaces within skateboarding and music. Amy O is available for session work, theatrical work,
-            commercials, TV and film, local and international tours, and sit in shows as a drummer. Amy O has been
-            drumming for over 15 years and is dedicated to continuing to hone her craft. Jam sessions, formal lessons,
-            and clinic attendance are all part of Amy O's commitment to continue to perfect her drumming.</h3>
-        </div>
-        <div id="bio-img-container"><img src="/images/IMG_4829.jpg" alt="amy o on drums">
-        </div>
+        <h3>Amy O is a drummer, skateboarder, video editor, event organizer, programmer (this site was developed by
+          yours truly!) from Dallas, TX, and based out of Atlanta. Amy O is passionate about creating judgement free,
+          inclusive spaces within skateboarding and music. Amy O is available for session work, theatrical work,
+          commercials, TV and film, local and international tours, and sit in shows as a drummer. Amy O has been
+          drumming for over 15 years and is dedicated to continuing to hone her craft. Jam sessions, formal lessons,
+          and clinic attendance are all part of Amy O's commitment to continue to perfect her drumming.</h3>
+        <img src="/images/IMG_4829.jpg" alt="amy o on drums">
+      </div>
       </div>
     </section>
 
@@ -123,4 +128,5 @@
 
 </body>
 <footer></footer>
+
 </html>
