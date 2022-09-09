@@ -12,17 +12,23 @@
 html {
   font-family: Arial, Helvetica, sans-serif;
   /*sets font for whole page*/
+  height: 100%;
+  border: blue solid 3px;
 }
 
 html, body{
   width: 100%;
 	height: 100%;
+  overflow-x: hidden; /* disables horizontal scrolling */
 }
 
 header {
   display: flex;
   position: fixed;  
   width: 100%;
+  z-index: 1234;
+  justify-content: space-evenly;
+  padding: 0px 5px 5px 0px;
 }
 
 nav{
@@ -35,6 +41,10 @@ nav{
 
 .main-menu-inner{
   width: 100%;
+}
+
+.main-menu-inner li{
+  padding: 3px;
 }
 
 .logo{
@@ -82,13 +92,42 @@ text-transform: uppercase;
 font-size: 20px;
 text-decoration: none;
 display: block;
-padding: 65px 30px;
+padding: 15px 30px 15px;
 }
 
 .main-menu-inner ul li a:hover{
   color: white;
 }
 
+.title{
+  font-weight: bold;
+  color: white;
+  text-transform: capitalize;
+  background-color: green;
+  width: auto;
+  border: 55px solid green;
+}
+
+.my-button{
+  border-radius: 50px;
+  border: 2px solid #000;
+  padding: 10px 30px;
+  background: rgb(232, 51, 31);
+  font-size: 2em;
+  color: yellow;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+ .nav-button{
+  border-radius: 50px;
+  border: 2px solid #000;
+  padding: 5px 30px;
+  background: rgb(232, 51, 31);
+  color: yellow;
+  font-weight: bold;
+  cursor: pointer;
+}
 /* ========== hamburger menu for mobile view ===========*/
 
 #hamburger-icon {
@@ -141,7 +180,7 @@ padding: 65px 30px;
 
 .mobile-menu li {
   margin-bottom: 10px;
-  font-size: 60px;
+  font-size: 10vw;
   line-height: 10vh;
   height: 100%;
   list-style: none;
@@ -151,10 +190,13 @@ padding: 65px 30px;
   color: white;
 }
 
-#computer {
-  width: 40vw;
+.programming-img, .bio-img-wrapper, .music-img{
+  display: inline-block;
+  text-align: center;
+  padding: 5px;
+  height: auto !important;
+  width: 100%;
 }
-
 
 /* when screen width is < 1000px, nav vanishes and hamburger menu shown instead */
 
@@ -170,6 +212,7 @@ padding: 65px 30px;
   .mobile-menu {
     background: var(--background);
     height: 100%;
+    width: 100%;
   }
 }
 
@@ -209,24 +252,35 @@ body {
 /* =======================================================*/
 
 .section-inner{
-  border: red solid;
+  border: red solid 2px;
   display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: auto;
   justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.audio-container{
+  display: flex;
+
+  justify-content: center;
+  border: purple solid 2px;
+  height: 90%;
+  width: 90%;
 }
 
 .section-inner-bio{
   text-align: justify;
+  padding: 10px;
 
-}
-
-.section-inner-bio img{
-  display: block;
-  margin: 0 auto;
 }
 
 section {
-  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -241,7 +295,6 @@ section {
   align-items: center;
 }
 
-
 /*========= website border ===========*/
 #top,
 #bottom,
@@ -249,33 +302,27 @@ section {
 #right {
   background: var(--background);
   position: fixed;
+  z-index: 123;
 }
 
 #left,
 #right {
-  top: 0;
-  bottom: 0;
+  top: 0; bottom: 0;
   width: 15px;
 }
 
-#left {
-  left: 0;
-}
-
-#right {
-  right: 0;
-}
+#left {left: 0;}
+#right {right: 0;}
 
 #top,
 #bottom {
-  left: 0;
-  right: 0;
+  left: 0; right: 0;
   height: 15px;
 }
 
 #top {
   top: 0;
-  height: 25vh;
+  height: 20vh;
 }
 
 #bottom {

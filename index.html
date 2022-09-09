@@ -1,12 +1,16 @@
 <html>
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>aMy O</title> <!-- will appear in tab as site name-->
   <link rel="stylesheet" href="/css/style.css"> <!-- reference stylesheet -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
   <script src="https://apis.google.com/js/platform.js"></script>
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <!--make favicon larger-->
+
 </head>
 
 <body>
@@ -23,12 +27,12 @@
         </div>
         <div class="main-menu-inner">
           <ul>
-            <li><a href="#drumming-bg">drumming</a></li>
-            <li><a href="#music-bg">music</a></li>
-            <li><a href="#loops-bg">loops</a></li>
-            <li><a href="#programming-bg">programming</a></li>
-            <li><a href="#bio-bg">bio</a></li>
-            <li><a href="#photos-bg">photos</a></li>
+            <li><a href="#drumming-bg" class="nav-button">drumming</a></li>
+            <li><a href="#music-bg" class="nav-button">music</a></li>
+            <li><a href="#loops-bg" class="nav-button">loops</a></li>
+            <li><a href="#programming-bg" class="nav-button">programming</a></li>
+            <li><a href="#bio-bg" class="nav-button">bio</a></li>
+            <li><a href="#photos-bg" class="nav-button">photos</a></li>
           </ul>
         </div>
       </div>
@@ -62,7 +66,7 @@
     <!------------------ Drumming section ---------------------->
     <section id="drumming-bg">
       <div class="section-inner">
-        <!-- <iframe width="1362" height="913" src="https://www.youtube.com/embed/ddSOvCFi5NY" title="performing on stage feels so juicy (◠﹏◠)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        <h3>Drumming stuff will go here!</h3>
       </div>
     </section>
     <!-------------------- Music section ----------------------->
@@ -70,29 +74,37 @@
       <div class="section-inner">
         <div class="title">Amy O's Demo</div>
         <a href="https://distrokid.com/hyperfollow/amyo/amy-os-demo">
-          <img alt="Amy O's Demo" src="/images/ab67616d0000b27351f80b6773fb2fac48b9b74f.jpeg" width=500"
-            height="500"></a>
-        <a class="button" href="https://distrokid.com/hyperfollow/amyo/amy-os-demo">Listen Now</a>
-        <div class="title">RARE! 13 Vices - Real Like You</div>
+          <div class="music-img">
+            <img alt="Amy O's Demo" src="/images/ab67616d0000b27351f80b6773fb2fac48b9b74f.jpeg"></div>
+
+            <button class="my-button">LISTEN NOW</button>
+        </a>
+      
+
+      <a class="button" href="https://distrokid.com/hyperfollow/amyo/amy-os-demo"></a>
+      <div class="title">RARE! 13 Vices - Real Like You</div>
+      <div class="audio-container">
         <audio controls>
           <source src="/audio/13 Vices - Real Like You (demo).mp3" type="audio/mpeg">
         </audio>
+      </div>
       </div>
     </section>
     <!-------------------- Loops section ----------------------->
     <section id="loops-bg">
       <div class="section-inner">
         <script src="https://apis.google.com/js/platform.js"></script>
+        <div class="yt-channels">
+          <div class="g-ytsubscribe" data-channelid="UCjXIp2cmMXb2KM3kVlFB_bA" data-layout="full" data-count="default">
+          </div>
+          <script src="https://apis.google.com/js/platform.js"></script>
 
-        <div class="g-ytsubscribe" data-channelid="UCjXIp2cmMXb2KM3kVlFB_bA" data-layout="full" data-count="default">
-        </div>
-        <script src="https://apis.google.com/js/platform.js"></script>
+          <div class="g-ytsubscribe" data-channelid="UCVbWbWqSnHVwrO4hjVvGoEQ" data-layout="full" data-count="default">
+          </div>
+          <script src="https://apis.google.com/js/platform.js"></script>
 
-        <div class="g-ytsubscribe" data-channelid="UCVbWbWqSnHVwrO4hjVvGoEQ" data-layout="full" data-count="default">
-        </div>
-        <script src="https://apis.google.com/js/platform.js"></script>
-
-        <div class="g-ytsubscribe" data-channelid="UCK7qwmqQ0YCK5SeVFQ4oJbw" data-layout="full" data-count="default">
+          <div class="g-ytsubscribe" data-channelid="UCK7qwmqQ0YCK5SeVFQ4oJbw" data-layout="full" data-count="default">
+          </div>
         </div>
       </div>
     </section>
@@ -100,28 +112,34 @@
     <section id="programming-bg">
       <div class="section-inner">
         <a href="https://github.com/amyoshi">
-          <img id="computer" src="/images/1480688.png"></a>
-        <h1>Click the computer to check out my GitHub</h1>
+          <div class="programming-img">
+            <img id="computer" src="/images/1480688.png">
+        </a>
+      </div>
+      <h2>Click the computer to check out my GitHub</h2>
       </div>
     </section>
     </div>
     <!--------------------- Bio section ----------------------->
     <section id="bio-bg">
-      <div class="section-inner-bio">
-        <h3>Amy O is a drummer, skateboarder, video editor, event organizer, programmer (this site was developed by
+      <div class="section-inner">
+        <h3>Amy O is a drummer, skateboarder, performer, video editor, event organizer, programmer (this site was
+          developed by
           yours truly!) from Dallas, TX, and based out of Atlanta. Amy O is passionate about creating judgement free,
           inclusive spaces within skateboarding and music. Amy O is available for session work, theatrical work,
           commercials, TV and film, local and international tours, and sit in shows as a drummer. Amy O has been
           drumming for over 15 years and is dedicated to continuing to hone her craft. Jam sessions, formal lessons,
           and clinic attendance are all part of Amy O's commitment to continue to perfect her drumming.</h3>
-        <img src="/images/IMG_4829.jpg" alt="amy o on drums">
-      </div>
+        <div class="bio-img-wrapper">
+          <img src="/images/IMG_4829.jpg" alt="">
+        </div>
       </div>
     </section>
 
     <section id="photos-bg">
       <div class="section-inner">
-        <h1> photos will go here!</h1>
+        <img src="/images/happysad.jpg" alt="" width="25%">
+        <img src="/images/IMG_5776.jpg" alt="" width="25%">
       </div>
     </section>
   </main>
