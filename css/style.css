@@ -480,6 +480,6 @@ section {
   width: 100%;
   position: fixed;
   z-index: 999999;
-  animation: rotation 4s infinite linear;
+  animation: rotation 6s infinite linear;
 }
 

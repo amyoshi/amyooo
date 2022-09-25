@@ -11,11 +11,11 @@ let dismissLoadingScreen = function () {
 };
 
 let wait3second = function () {
-  let result = setTimeout(dismissLoadingScreen, 1800);
+  let result = setTimeout(dismissLoadingScreen, 1500);
 };
 
 let wait3seconds = function () {
-  let result = setTimeout(dismissLoadingImg, 1800);
+  let result = setTimeout(dismissLoadingImg, 1500);
 };
 
 window.addEventListener("load", wait3second);
