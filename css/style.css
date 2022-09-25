@@ -1,4 +1,18 @@
 /* always work from the outside in */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;900&display=swap');
+
+@font-face {
+  font-family: 'porkysregular';
+  src: url(/fonts/porkys_-webfont.woff2) format('woff2'),
+       url(/fonts/porkys_-webfont.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+strong, p{
+  font-family: 'Nunito', sans-serif;
+}
+
 :root {
   --background: url(/images/green-bg.jpg);
 }
@@ -9,11 +23,32 @@
   box-sizing: border-box;
 }
 
+button{
+  font-family: 'porkysregular';
+}
+
+.rotate{
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  animation: rotation 4s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);}
+    to {
+    transform: rotate(359deg);
+  }
+}
+
 html {
-  font-family: Arial, Helvetica, sans-serif;
   /*sets font for whole page*/
   height: 100%;
   border: blue solid 3px;
+  overscroll-behavior-y: contain;
 }
 
 html, body{
@@ -23,103 +58,113 @@ html, body{
 }
 
 header {
-  display: flex;
   position: fixed;  
   width: 100%;
   z-index: 1234;
-  justify-content: space-evenly;
-  padding: 0px 5px 5px 0px;
 }
 
-nav{
-  width: 100%;
-}
-
-#main-menu{
+.logo-container{
   position: relative;
-}
-
-.main-menu-inner{
-  width: 100%;
-}
-
-.main-menu-inner li{
-  padding: 3px;
-}
-
-.logo{
-width: 300px;
-height: 300px;
-position: absolute;
-left: 50%;
-top: 0;
-content: "";
-margin-left: -150px;
-text-align: center;
-}
-
-.main-menu-inner{
-margin: 0;
-padding: 0;
-width: 100%
-}
-
-.main-menu-inner ul{
-  margin: 0;
+  bottom: 30%;
   padding: 0;
-  list-style: none;
-  text-align: right;
+  min-width: 75%;
 }
 
-.main-menu-inner ul li{
-float: none;
-display: inline-block;
+#amyologo{
+position: relative;
+ width: 75%;
+ max-width: 75%;
+ padding: 2vw;
 }
 
-.main-menu-inner ul li:nth-child(1){
-  float: left;
+nav {
+  display: flex;
+  width: 100%;
+  text-transform: uppercase;
 }
 
-.main-menu-inner ul li:nth-child(2){
-  float: left;
-}
-.main-menu-inner ul li:nth-child(3){
-  float: left;
-}
-
-.main-menu-inner ul li a{
-text-transform: uppercase;
-font-size: 20px;
-text-decoration: none;
-display: block;
-padding: 15px 30px 15px;
+nav a{
+  text-decoration: none;
+  position: relative;
+  bottom: 35%;
 }
 
-.main-menu-inner ul li a:hover{
+nav>* {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 3px;
+  margin: 0;
+}
+
+nav a:hover{
   color: white;
 }
 
+span a{
+  padding: 2vw ;
+}
+
+.demo-title{
+  font-family: 'Nunito', sans-serif;
+  white-space: nowrap;
+  font-weight: bold;
+  float: left;
+  width: 20vw;;
+  flex-direction: row;
+  color: white;
+  background-color: green;
+  border: 10px solid green;
+  margin: 5px 0px 0px 0px;
+}
+
 .title{
+  font-family: 'Nunito', sans-serif;
+  float: right;
+  white-space: nowrap;
+  flex-direction: row;
+  text-align: center;
   font-weight: bold;
   color: white;
   text-transform: capitalize;
   background-color: green;
-  width: auto;
-  border: 55px solid green;
+  border: 10px solid green;
+  margin: 5px 0px 0px 0px;
+  width: 60%;
 }
 
 .my-button{
+  font-family: 'porkysregular';
+  letter-spacing: 1px;
   border-radius: 50px;
   border: 2px solid #000;
-  padding: 10px 30px;
+  padding: 10px 25px;
   background: rgb(232, 51, 31);
-  font-size: 2em;
+  font-size: 3vh;
   color: yellow;
   font-weight: bold;
   cursor: pointer;
+  align-items: center;
+  align-content: center;
 }
 
+.column {
+  border: chartreuse solid 3px;
+  width: 25%;
+  padding: 5px;
+  max-height: 100vh;
+}
+
+/* .example > .music-img {order: 1; } /* Will be displayed first  */
+/* .example > .column {order: 3; } /* Will be displayed third */
+/* .example > .button-container {order: 2; } /* Will be displayed second  */
+
+
  .nav-button{
+  font-family: 'porkysregular';
+  text-decoration: none;
+  letter-spacing: 2px;
   border-radius: 50px;
   border: 2px solid #000;
   padding: 5px 30px;
@@ -133,14 +178,14 @@ padding: 15px 30px 15px;
 #hamburger-icon {
   position: fixed;
   right: 25px;
-  top: 10vh;
+  top: 1vh;
   display: none;
   cursor: pointer;
 }
 
 #hamburger-icon div {
-  width: 46px;
-  height: 4px;
+  width: 40px;
+  height: 3px;
   background-color: black;
   margin: 6px;
   transition: 0.4s;
@@ -190,7 +235,7 @@ padding: 15px 30px 15px;
   color: white;
 }
 
-.programming-img, .bio-img-wrapper, .music-img{
+.programming-img{
   display: inline-block;
   text-align: center;
   padding: 5px;
@@ -198,10 +243,21 @@ padding: 15px 30px 15px;
   width: 100%;
 }
 
+#music-img{
+  width: 20vw;
+  margin: 0px 5px 5px 5px;
+  height: auto;
+  padding: 1vw;
+}
+
+.music-img-container{
+  float: left;
+}
+
 /* when screen width is < 1000px, nav vanishes and hamburger menu shown instead */
 
 @media only screen and (max-width: 1000px) {
-  .main-menu-inner ul li a {
+  nav a {
     display: none;
   }
 
@@ -214,6 +270,21 @@ padding: 15px 30px 15px;
     height: 100%;
     width: 100%;
   }
+
+.column{
+  display: none;
+}
+
+#amyologo{
+  display: block;
+  position: fixed;
+  float: left;
+  width: 100%;
+  max-width: 15vw;
+  top: 0 !important;
+  left: 0 !important;
+}
+
 }
 
 main{
@@ -252,24 +323,46 @@ body {
 /* =======================================================*/
 
 .section-inner{
-  border: red solid 2px;
+  border: #fbda00 solid 3px;
   display: flex;
   flex: 1;
   flex-wrap: wrap;
-  flex-direction: column;
   margin: auto;
   justify-content: center;
   text-align: center;
+  width: 100vw;
+  height: 100vh;
+  flex-basis: 100vh;
+  align-items: center;
+  align-content: center;
+}
+
+.section-inner-music{
+  display: flex;
+  flex: 1;
+  flex-basis: 100vh;
+  padding: 5vw;
   width: 100%;
+  height: 100vh;
+}
+
+
+.demo-container{
+  flex-direction: column;
+  position:relative;
+  display: flex;
+  float: left;
+  left: 0;
 }
 
 .audio-container{
   display: flex;
-
+  flex-direction: column;
+  float: right;
   justify-content: center;
   border: purple solid 2px;
-  height: 90%;
-  width: 90%;
+  height: auto;
+  width: 50%;
 }
 
 .section-inner-bio{
@@ -283,7 +376,7 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  
 }
 
 #hero {
@@ -308,7 +401,7 @@ section {
 #left,
 #right {
   top: 0; bottom: 0;
-  width: 15px;
+  width: 2vw;
 }
 
 #left {left: 0;}
@@ -322,11 +415,12 @@ section {
 
 #top {
   top: 0;
-  height: 20vh;
+  height: 8vh;
 }
 
 #bottom {
   bottom: 0;
+  height: 3vh;
 }
 
 /*==========================================*/
@@ -339,7 +433,7 @@ section {
 #photos-bg {
   background-size: cover;
   background-position: center;
-  border: rgb(131, 255, 6) solid;
+  width: 100vw;
 }
 
 #drumming-bg {
@@ -370,3 +464,22 @@ section {
 .vids-wrapper {
   display: grid;
 }
+
+#preloader-bg{
+  background: #20C02F;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 99999;
+}
+
+#preloader{
+  background: url(/images/amyologogreen.png) no-repeat center center;
+  background-size: 50%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 999999;
+  animation: rotation 4s infinite linear;
+}
+

@@ -1,150 +1,225 @@
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>aMy O</title>
+    <!-- will appear in tab as site name-->
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- reference stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <script src="https://apis.google.com/js/platform.js"></script>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <!--make favicon larger-->
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>aMy O</title> <!-- will appear in tab as site name-->
-  <link rel="stylesheet" href="/css/style.css"> <!-- reference stylesheet -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-  <script src="https://apis.google.com/js/platform.js"></script>
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-  <!--make favicon larger-->
+  <body>
+    <div id="preloader"></div>
+    <div id="preloader-bg"></div>
 
-</head>
+    <!--4 divs for website border-->
+    <div id="left"></div>
+    <div id="right"></div>
+    <div id="top"></div>
+    <div id="bottom"></div>
 
-<body>
-  <!--4 divs for website border-->
-  <div id="left"></div>
-  <div id="right"></div>
-  <div id="top"></div>
-  <div id="bottom"></div>
-  <header>
-    <nav>
-      <div id="main-menu">
-        <div class="logo">
-          <a href="#"><img src="/images/amyologogreen.png"></a>
-        </div>
-        <div class="main-menu-inner">
-          <ul>
-            <li><a href="#drumming-bg" class="nav-button">drumming</a></li>
-            <li><a href="#music-bg" class="nav-button">music</a></li>
-            <li><a href="#loops-bg" class="nav-button">loops</a></li>
-            <li><a href="#programming-bg" class="nav-button">programming</a></li>
-            <li><a href="#bio-bg" class="nav-button">bio</a></li>
-            <li><a href="#photos-bg" class="nav-button">photos</a></li>
-          </ul>
-        </div>
+    <header>
+      <nav>
+            <span>
+              <a href="#drumming-bg" class="nav-button">drumming</a>
+              <a href="#music-bg" class="nav-button">music</a>
+              <a href="#loops-bg" class="nav-button">loops</a>
+            </span>
+            <span><div class="logo-container"><a href="index.html"><img id="amyologo" src="/images/amyologogreen.png" /></a></div></span>
+            <span>
+              <a href="#programming-bg" class="nav-button">programming</a>
+              <a href="#bio-bg" class="nav-button">bio</a>
+              <a href="#photos-bg" class="nav-button">photos</a>
+            </span>
+      </nav>
+
+      <!---- Hamburger menu overlay ----->
+
+      <!---------------------- Hamburger menu -------------------------->
+      <div id="hamburger-icon" onclick="toggleMobileMenu(this); toggleLogo()" ;>
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <ul class="mobile-menu">
+          <li><a href="#drumming-bg" class="nav-button">DRUMMING</a></li>
+          <li><a href="#music-bg" class="nav-button">MUSIC</a></li>
+          <li><a href="#loops-bg" class="nav-button">LOOPS</a></li>
+          <li><a href="#programming-bg" class="nav-button">PROGRAMMING</a></li>
+          <li><a href="#bio-bg" class="nav-button">BIO</a></li>
+          <li><a href="#photos-bg" class="nav-button">PHOTOS</a></li>
+        </ul>
       </div>
-    </nav>
-
-    <!---- Hamburger menu overlay ----->
-
-
-    <!---------------------- Hamburger menu -------------------------->
-    <div id="hamburger-icon" onclick="toggleMobileMenu(this); toggleLogo()" ;>
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-      <ul class="mobile-menu">
-        <li><a href="#drumming-bg">DRUMMING</a></li>
-        <li><a href="#music-bg">MUSIC</a></li>
-        <li><a href="#loops-bg">LOOPS</a></li>
-        <li><a href="#programming-bg">PROGRAMMING</a></li>
-        <li><a href="#bio-bg">BIO</a></li>
-        <li><a href="#photos-bg">PHOTOS</a></li>
-      </ul>
-    </div>
-  </header>
-  <script src="/javascript/index.js"></script>
-  <main>
-
-    <!--------------------- Hero section ----------------------->
-    <section id="hero">
-      <div class="section-inner"></div>
-    </section>
-    <!------------------ Drumming section ---------------------->
-    <section id="drumming-bg">
-      <div class="section-inner">
-        <h3>Drumming stuff will go here!</h3>
-      </div>
-    </section>
-    <!-------------------- Music section ----------------------->
-    <section id="music-bg">
-      <div class="section-inner">
-        <div class="title">Amy O's Demo</div>
-        <a href="https://distrokid.com/hyperfollow/amyo/amy-os-demo">
-          <div class="music-img">
-            <img alt="Amy O's Demo" src="/images/ab67616d0000b27351f80b6773fb2fac48b9b74f.jpeg"></div>
-
+    </header>
+    <script src="/javascript/index.js"></script>
+    <main>
+      <!--------------------- Hero section ----------------------->
+      <section id="hero">
+        <div class="section-inner"></div>
+      </section>
+      <!------------------ Drumming section ---------------------->
+      <section id="drumming-bg">
+        <div class="section-inner">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/TU6u3l7tvfc?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </section>
+      <!-------------------- Music section ----------------------->
+      <section id="music-bg">
+        <div class="section-inner-music">
+          <div class="demo-container">
+            <div class="demo-title">Amy O's Demo</div>         
+              <img
+                id="music-img"
+                alt="Amy O's Demo"
+                src="/images/ab67616d0000b27351f80b6773fb2fac48b9b74f.jpeg"
+              />
+          </div>
+          <div class="button-container">
             <button class="my-button">LISTEN NOW</button>
-        </a>
-      
-
-      <a class="button" href="https://distrokid.com/hyperfollow/amyo/amy-os-demo"></a>
-      <div class="title">RARE! 13 Vices - Real Like You</div>
-      <div class="audio-container">
-        <audio controls>
-          <source src="/audio/13 Vices - Real Like You (demo).mp3" type="audio/mpeg">
-        </audio>
-      </div>
-      </div>
-    </section>
-    <!-------------------- Loops section ----------------------->
-    <section id="loops-bg">
-      <div class="section-inner">
-        <script src="https://apis.google.com/js/platform.js"></script>
-        <div class="yt-channels">
-          <div class="g-ytsubscribe" data-channelid="UCjXIp2cmMXb2KM3kVlFB_bA" data-layout="full" data-count="default">
+            <a href="https://distrokid.com/hyperfollow/amyo/amy-os-demo"></a>
           </div>
-          <script src="https://apis.google.com/js/platform.js"></script>
 
-          <div class="g-ytsubscribe" data-channelid="UCVbWbWqSnHVwrO4hjVvGoEQ" data-layout="full" data-count="default">
-          </div>
-          <script src="https://apis.google.com/js/platform.js"></script>
-
-          <div class="g-ytsubscribe" data-channelid="UCK7qwmqQ0YCK5SeVFQ4oJbw" data-layout="full" data-count="default">
+          <div class="audio-container">
+            <div class="title">RARE! 13 Vices - Real Like You</div>
+            <audio controls>
+              <source
+                src="audio/13 Vices - Real Like You (demo).mp3"
+                type="audio/mpeg"
+              />
+            </audio>
           </div>
         </div>
-      </div>
-    </section>
-    <!----------------- Programming section -------------------->
-    <section id="programming-bg">
-      <div class="section-inner">
-        <a href="https://github.com/amyoshi">
+      </section>
+      <!-------------------- Loops section ----------------------->
+      <section id="loops-bg">
+        <div class="section-inner">
+          <script src="https://apis.google.com/js/platform.js"></script>
+          <div class="yt-channels">
+            <div
+              class="g-ytsubscribe"
+              data-channelid="UCjXIp2cmMXb2KM3kVlFB_bA"
+              data-layout="full"
+              data-count="default"
+            ></div>
+            <script src="https://apis.google.com/js/platform.js"></script>
+
+            <div
+              class="g-ytsubscribe"
+              data-channelid="UCVbWbWqSnHVwrO4hjVvGoEQ"
+              data-layout="full"
+              data-count="default"
+            ></div>
+            <script src="https://apis.google.com/js/platform.js"></script>
+
+            <div
+              class="g-ytsubscribe"
+              data-channelid="UCK7qwmqQ0YCK5SeVFQ4oJbw"
+              data-layout="full"
+              data-count="default"
+            ></div>
+          </div>
+        </div>
+      </section>
+      <!----------------- Programming section -------------------->
+      <section id="programming-bg">
+        <div class="section-inner">
           <div class="programming-img">
-            <img id="computer" src="/images/1480688.png">
-        </a>
-      </div>
-      <h2>Click the computer to check out my GitHub</h2>
-      </div>
-    </section>
-    </div>
-    <!--------------------- Bio section ----------------------->
-    <section id="bio-bg">
-      <div class="section-inner">
-        <h3>Amy O is a drummer, skateboarder, performer, video editor, event organizer, programmer (this site was
-          developed by
-          yours truly!) from Dallas, TX, and based out of Atlanta. Amy O is passionate about creating judgement free,
-          inclusive spaces within skateboarding and music. Amy O is available for session work, theatrical work,
-          commercials, TV and film, local and international tours, and sit in shows as a drummer. Amy O has been
-          drumming for over 15 years and is dedicated to continuing to hone her craft. Jam sessions, formal lessons,
-          and clinic attendance are all part of Amy O's commitment to continue to perfect her drumming.</h3>
-        <div class="bio-img-wrapper">
-          <img src="/images/IMG_4829.jpg" alt="">
+            <a href="https://github.com/amyoshi">
+              <img id="computer" src="/images/1480688.png" />
+            </a>
+          </div>
+          <strong>Click the computer to check out my GitHub</strong>
         </div>
-      </div>
-    </section>
+      </section>
+      <!--------------------- Bio section ----------------------->
+      <section id="bio-bg">
+        <div class="section-inner">
+          <div class="bio-img-wrapper">
+            <img src="/images/IMG_4829.jpg" alt="" />
+          </div>
+          <div class="column">
+            <div class="title">Biography</div>
+            
+            <strong>Name</strong>
+            <p>aMy O</p>
+            <br />
 
-    <section id="photos-bg">
-      <div class="section-inner">
-        <img src="/images/happysad.jpg" alt="" width="25%">
-        <img src="/images/IMG_5776.jpg" alt="" width="25%">
-      </div>
-    </section>
-  </main>
+            <strong>Also known as</strong>
+            <p>Amy</p>
+            <p>Yoshi</p>
+            <p>Amyoshi</p>
+            <p>Chi Chi</p>
+            <br />
 
-</body>
-<footer></footer>
+            <strong>Place of birth</strong><br />
+            <p>Dallas, Texas, U.S.</p>
+            <br />
 
+            <strong>Occupation(s)</strong>
+            <p>Musician</p>
+            <p>Performer</p>
+            <p>Video editor</p>
+            <p>Actor</p>
+            <p>Music producer</p>
+            <br />
+
+            <strong>Instruments of choice</strong><br />
+            <p>Drumset</p>
+            <p>Percussion</p>
+            <p>Bass guitar</p>
+            <br />
+
+            <strong>Hobbies & acts of leisure</strong><br />
+            <p>Drumming</p>
+            <p>Skateboarding</p>
+            <p>Fingerboarding</p>
+            <p>Playing bass guitar</p>
+            <p>Legos</p>
+            <p>Video games</p>
+            <p>Coding</p>
+            <p>Learning Mandarin Chinese</p>
+            <p>Video editing</p>
+            <p>Watching anime</p>
+            <p>Reading occasionally</p>
+            <br />
+
+            <strong>Resumes</strong><br />
+            <p><a href="/docs/Amy O Resume.docx">For the creatives</a></p>
+            <br />
+
+            <strong>BONUS: Click for a random fun fact</strong><br />
+            <p>aMy O is learning Mandarin Chinese!</p>
+            <br />
+          </div>
+        </div>
+        <p>
+          Amy O is a drummer, skateboarder, performer, video editor, event
+          organizer, programmer (this site was developed by yours truly!) from
+          Dallas, TX, and based out of Atlanta. Amy O is passionate about
+          creating judgement free, inclusive spaces within skateboarding and
+          music. Amy O is available for session work, theatrical work,
+          commercials, TV and film, local and international tours, and sit in
+          shows as a drummer. Amy O has been drumming for over 15 years and is
+          dedicated to continuing to hone her craft. Jam sessions, formal
+          lessons, and clinic attendance are all part of Amy O's commitment to
+          continue to perfect her drumming.
+        </p>
+      </section>
+
+      <section id="photos-bg">
+        <div class="section-inner">
+          <img src="/images/happysad.jpg" alt="" width="25%" />
+          <img src="/images/IMG_5776.jpg" alt="" width="25%" />
+        </div>
+      </section>
+    </main>
+  </body>
+  <footer></footer>
 </html>
