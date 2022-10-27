@@ -1,16 +1,17 @@
 /* always work from the outside in */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600;900&display=swap");
 
 @font-face {
-  font-family: 'porkysregular';
-  src: url(/fonts/porkys_-webfont.woff2) format('woff2'),
-       url(/fonts/porkys_-webfont.woff) format('woff');
+  font-family: "porkysregular";
+  src: url(/fonts/porkys_-webfont.woff2) format("woff2"),
+    url(/fonts/porkys_-webfont.woff) format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
-strong, p{
-  font-family: 'Nunito', sans-serif;
+strong,
+p {
+  font-family: "Nunito", sans-serif;
 }
 
 :root {
@@ -23,11 +24,11 @@ strong, p{
   box-sizing: border-box;
 }
 
-button{
-  font-family: 'porkysregular';
+button {
+  font-family: "porkysregular";
 }
 
-.rotate{
+.rotate {
   top: 0;
   bottom: 0;
   right: 0;
@@ -38,43 +39,43 @@ button{
 
 @keyframes rotation {
   from {
-    transform: rotate(0deg);}
-    to {
+    transform: rotate(0deg);
+  }
+  to {
     transform: rotate(359deg);
   }
 }
 
 html {
-  /*sets font for whole page*/
-  height: 100%;
   border: blue solid 3px;
   overscroll-behavior-y: contain;
 }
 
-html, body{
+html,
+body {
   width: 100%;
-	height: 100%;
+  height: 100%;
   overflow-x: hidden; /* disables horizontal scrolling */
 }
 
 header {
-  position: fixed;  
+  position: fixed;
   width: 100%;
   z-index: 1234;
 }
 
-.logo-container{
+.logo-container {
   position: relative;
   bottom: 30%;
   padding: 0;
   min-width: 75%;
 }
 
-#amyologo{
-position: relative;
- width: 75%;
- max-width: 75%;
- padding: 2vw;
+#amyologo {
+  position: relative;
+  width: 75%;
+  max-width: 75%;
+  padding: 2vw;
 }
 
 nav {
@@ -83,13 +84,13 @@ nav {
   text-transform: uppercase;
 }
 
-nav a{
+nav a {
   text-decoration: none;
   position: relative;
   bottom: 35%;
 }
 
-nav>* {
+nav > * {
   flex: 1;
   display: flex;
   align-items: center;
@@ -98,20 +99,21 @@ nav>* {
   margin: 0;
 }
 
-nav a:hover{
+nav a:hover {
   color: white;
+  cursor: pointer;
 }
 
-span a{
-  padding: 2vw ;
+span a {
+  padding: 2vw;
 }
 
-.demo-title{
-  font-family: 'Nunito', sans-serif;
+.demo-title {
+  font-family: "Nunito", sans-serif;
   white-space: nowrap;
   font-weight: bold;
   float: left;
-  width: 20vw;;
+  width: 20vw;
   flex-direction: row;
   color: white;
   background-color: green;
@@ -119,8 +121,8 @@ span a{
   margin: 5px 0px 0px 0px;
 }
 
-.title{
-  font-family: 'Nunito', sans-serif;
+.title {
+  font-family: "Nunito", sans-serif;
   float: right;
   white-space: nowrap;
   flex-direction: row;
@@ -131,11 +133,11 @@ span a{
   background-color: green;
   border: 10px solid green;
   margin: 5px 0px 0px 0px;
-  width: 60%;
+  width: 100%;
 }
 
-.my-button{
-  font-family: 'porkysregular';
+.my-button {
+  font-family: "porkysregular";
   letter-spacing: 1px;
   border-radius: 50px;
   border: 2px solid #000;
@@ -150,19 +152,20 @@ span a{
 }
 
 .column {
+  display: flex;
+  flex-direction: column;
   border: chartreuse solid 3px;
   width: 25%;
   padding: 5px;
-  max-height: 100vh;
 }
 
 /* .example > .music-img {order: 1; } /* Will be displayed first  */
 /* .example > .column {order: 3; } /* Will be displayed third */
 /* .example > .button-container {order: 2; } /* Will be displayed second  */
 
-
- .nav-button{
-  font-family: 'porkysregular';
+.nav-button {
+  font-family: "porkysregular";
+  top: 1;
   text-decoration: none;
   letter-spacing: 2px;
   border-radius: 50px;
@@ -224,9 +227,8 @@ span a{
 }
 
 .mobile-menu li {
-  margin-bottom: 10px;
-  font-size: 10vw;
-  line-height: 10vh;
+  margin: 2%;
+  font-size: 8vh;
   height: 100%;
   list-style: none;
 }
@@ -235,7 +237,11 @@ span a{
   color: white;
 }
 
-.programming-img{
+.bio-img {
+  height: 80vh;
+}
+
+.programming-img {
   display: inline-block;
   text-align: center;
   padding: 5px;
@@ -243,14 +249,14 @@ span a{
   width: 100%;
 }
 
-#music-img{
+#music-img {
   width: 20vw;
   margin: 0px 5px 5px 5px;
   height: auto;
   padding: 1vw;
 }
 
-.music-img-container{
+.music-img-container {
   float: left;
 }
 
@@ -271,27 +277,26 @@ span a{
     width: 100%;
   }
 
-.column{
-  display: none;
+  .column {
+    display: none;
+  }
+
+  #amyologo {
+    display: block;
+    position: fixed;
+    float: left;
+    width: 100%;
+    max-width: 15vw;
+    top: 0 !important;
+    left: 0 !important;
+  }
 }
 
-#amyologo{
-  display: block;
-  position: fixed;
-  float: left;
+main {
   width: 100%;
-  max-width: 15vw;
-  top: 0 !important;
-  left: 0 !important;
 }
 
-}
-
-main{
-  width: 100%;
-}
-
-/* scrollbar */
+/* scrollbar 
 body::-webkit-scrollbar {
   width: 1em;
   color: blue;
@@ -312,8 +317,7 @@ body::-webkit-scrollbar-thumb {
   box-shadow: 7px 7px 0px 0px #000000;
   border-radius: 100vw;
 }
-
-/*----------*/
+*/
 
 body {
   display: flex;
@@ -322,7 +326,8 @@ body {
 
 /* =======================================================*/
 
-.section-inner{
+.section-inner {
+  padding: 5%;
   border: #fbda00 solid 3px;
   display: flex;
   flex: 1;
@@ -331,13 +336,12 @@ body {
   justify-content: center;
   text-align: center;
   width: 100vw;
-  height: 100vh;
   flex-basis: 100vh;
   align-items: center;
   align-content: center;
 }
 
-.section-inner-music{
+.section-inner-music {
   display: flex;
   flex: 1;
   flex-basis: 100vh;
@@ -346,16 +350,15 @@ body {
   height: 100vh;
 }
 
-
-.demo-container{
+.demo-container {
   flex-direction: column;
-  position:relative;
+  position: relative;
   display: flex;
   float: left;
   left: 0;
 }
 
-.audio-container{
+.audio-container {
   display: flex;
   flex-direction: column;
   float: right;
@@ -365,18 +368,9 @@ body {
   width: 50%;
 }
 
-.section-inner-bio{
-  text-align: justify;
-  padding: 10px;
-
-}
-
 section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  
 }
 
 #hero {
@@ -400,16 +394,22 @@ section {
 
 #left,
 #right {
-  top: 0; bottom: 0;
+  top: 0;
+  bottom: 0;
   width: 2vw;
 }
 
-#left {left: 0;}
-#right {right: 0;}
+#left {
+  left: 0;
+}
+#right {
+  right: 0;
+}
 
 #top,
 #bottom {
-  left: 0; right: 0;
+  left: 0;
+  right: 0;
   height: 15px;
 }
 
@@ -437,43 +437,66 @@ section {
 }
 
 #drumming-bg {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(/images/IMG_1762.JPG);
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.75)
+    ),
+    url(/images/IMG_1762.JPG);
 }
 
 #music-bg {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(/images/IMG_1757.JPG);
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.75)
+    ),
+    url(/images/IMG_1757.JPG);
 }
 
 #loops-bg {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(/images/IMG_1764.JPG);
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.75)
+    ),
+    url(/images/IMG_1764.JPG);
 }
 
 #programming-bg {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(/images/IMG_1759.JPG);
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.75)
+    ),
+    url(/images/IMG_1759.JPG);
 }
 
 #bio-bg {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(/images/IMG_1768.jpg);
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.75)
+    ),
+    url(/images/IMG_1768.jpg);
 }
 
 #photos-bg {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(/images/Imagen7.jpg);
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.75)
+    ),
+    url(/images/Imagen7.jpg);
 }
-
 
 .vids-wrapper {
   display: grid;
 }
 
-#preloader-bg{
-  background: #20C02F;
+#preloader-bg {
+  background: #20c02f;
   height: 100vh;
   width: 100vw;
   position: fixed;
   z-index: 99999;
 }
 
-#preloader{
+#preloader {
   background: url(/images/amyologogreen.png) no-repeat center center;
   background-size: 50%;
   height: 100vh;
@@ -483,3 +506,30 @@ section {
   animation: rotation 6s infinite linear;
 }
 
+#contact-bg {
+  background-image: url(/images/clouds.jpg);
+  width: 100%;
+  height: 30rem; /* Footer height */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#footer-logo {
+  padding: 5%;
+}
+
+#footer img {
+  
+  text-align: left;
+
+}
+
+.con-div{
+  border: purple 1px solid;
+}
+
+#favicons{
+  display: flex;
+  flex-direction: column;
+}
