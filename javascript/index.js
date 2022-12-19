@@ -11,11 +11,11 @@ let dismissLoadingScreen = function () {
 };
 
 let wait3second = function () {
-  let result = setTimeout(dismissLoadingScreen, 1500);
+  let result = setTimeout(dismissLoadingScreen, 1000);
 };
 
 let wait3seconds = function () {
-  let result = setTimeout(dismissLoadingImg, 1500);
+  let result = setTimeout(dismissLoadingImg, 1000);
 };
 
 window.addEventListener("load", wait3second);
@@ -27,3 +27,7 @@ let logo = document.getElementbyId("amyo");
 function toggleMobileMenu(menu) {
   menu.classList.toggle("open");
 }
+
+/* thumbnail carousel */
+
+/* photo carousel */

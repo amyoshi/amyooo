@@ -24,6 +24,10 @@ p {
   box-sizing: border-box;
 }
 
+.logo{
+  height: 9vh;
+}
+
 button {
   font-family: "porkysregular";
 }
@@ -41,6 +45,7 @@ button {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(359deg);
   }
@@ -55,7 +60,8 @@ html,
 body {
   width: 100%;
   height: 100%;
-  overflow-x: hidden; /* disables horizontal scrolling */
+  overflow-x: hidden;
+  /* disables horizontal scrolling */
 }
 
 header {
@@ -64,24 +70,11 @@ header {
   z-index: 1234;
 }
 
-.logo-container {
-  position: relative;
-  bottom: 30%;
-  padding: 0;
-  min-width: 75%;
-}
-
-#amyologo {
-  position: relative;
-  width: 75%;
-  max-width: 75%;
-  padding: 2vw;
-}
-
 nav {
   display: flex;
   width: 100%;
   text-transform: uppercase;
+  padding: 2vh;
 }
 
 nav a {
@@ -90,7 +83,7 @@ nav a {
   bottom: 35%;
 }
 
-nav > * {
+nav>* {
   flex: 1;
   display: flex;
   align-items: center;
@@ -108,7 +101,7 @@ span a {
   padding: 2vw;
 }
 
-.title{
+.title {
   font-family: "Nunito", sans-serif;
   white-space: nowrap;
   text-align: center;
@@ -121,7 +114,7 @@ span a {
   width: 46%;
 }
 
-.demo-title{
+.demo-title {
   font-family: "Nunito", sans-serif;
   white-space: nowrap;
   text-align: center;
@@ -151,12 +144,13 @@ span a {
 
 .column {
   display: flex;
-  flex-direction: column;
-  float: right;
+  align-self: center;
   border: chartreuse solid 3px;
   padding: 5px;
-  display:inline-block; width:30%;
+  display: inline-block;
+  width: 30%;
 }
+
 
 /* .example > .music-img {order: 1; } /* Will be displayed first  */
 /* .example > .column {order: 3; } /* Will be displayed third */
@@ -164,7 +158,7 @@ span a {
 
 .nav-button {
   font-family: "porkysregular";
-  top: 1;
+  
   text-decoration: none;
   letter-spacing: 2px;
   border-radius: 50px;
@@ -175,6 +169,7 @@ span a {
   font-weight: bold;
   cursor: pointer;
 }
+
 /* ========== hamburger menu for mobile view ===========*/
 
 #hamburger-icon {
@@ -236,13 +231,7 @@ span a {
   color: white;
 }
 
-.section-inner p{
- text-align: center;
- align-items: center;
- align-content: center;
- text-align: center;
-  
-}
+
 
 .programming-img {
   display: inline-block;
@@ -254,7 +243,7 @@ span a {
 
 #music-img {
   display: flex;
-  max-width: 50%;
+  max-width: 30%;
   align-self: center;
   padding: 2%;
 }
@@ -266,12 +255,21 @@ span a {
 /* when screen width is < 1000px, nav vanishes and hamburger menu shown instead */
 
 @media only screen and (max-width: 1000px) {
-  nav a {
+  nav :nth-child(2),
+  nav :nth-child(3),
+  nav :nth-child(4),
+  nav :nth-child(5)
+  {
     display: none;
   }
 
   #hamburger-icon {
     display: block;
+  }
+
+  nav *{
+    display: flex;
+    justify-content: left;
   }
 
   .mobile-menu {
@@ -280,7 +278,7 @@ span a {
     width: 100%;
   }
 
-  *{
+  .section-inner {
     flex-direction: column;
   }
 
@@ -288,14 +286,9 @@ span a {
     display: none;
   }
 
-  #amyologo {
+  .logo {
     display: block;
-    position: fixed;
     float: left;
-    width: 100%;
-    max-width: 15vw;
-    top: 0 !important;
-    left: 0 !important;
   }
 }
 
@@ -327,26 +320,24 @@ body::-webkit-scrollbar-thumb {
 */
 
 body {
-  display: flex;
+  
   border: red solid;
 }
 
 /* =======================================================*/
 
 .section-inner {
-  padding: 5%;
+  padding: 15%;
   border: #fbda00 solid 3px;
   display: flex;
   flex: 1;
   flex-wrap: wrap;
   margin: auto;
-  justify-content: center;
+  height: 100%;
   text-align: center;
   width: 100vw;
   flex-basis: 100vh;
-  align-items: center;
-  align-content: center;
-  text-align: center;
+ 
 }
 
 .section-inner-music {
@@ -375,13 +366,15 @@ body {
   align-items: center;
   border: purple solid 2px;
   height: auto;
-  width: 50%;
-  padding: 15%;
+  width: 40%;
+  padding: 5%;
 }
 
+/* fix section styling for bio section */
+
 section {
-  display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 
 #hero {
@@ -390,7 +383,6 @@ section {
   background-position: center;
   width: 100vw;
   height: 100vh;
-  align-items: center;
 }
 
 /*========= website border ===========*/
@@ -413,6 +405,7 @@ section {
 #left {
   left: 0;
 }
+
 #right {
   right: 0;
 }
@@ -421,22 +414,21 @@ section {
 #bottom {
   left: 0;
   right: 0;
-  height: 15px;
 }
 
 #top {
   top: 0;
-  height: 8vh;
+  height: 12vh;
 }
 
 #bottom {
   bottom: 0;
-  height: 3vh;
+  height: 2vh;
 }
 
 /*==========================================*/
 
-#drumming-bg,
+#video-bg,
 #music-bg,
 #loops-bg,
 #programming-bg,
@@ -448,57 +440,42 @@ section {
   width: 100vw;
 }
 
-#drumming-bg {
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.75),
-      rgba(255, 255, 255, 0.75)
-    ),
+#video-bg {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.75)),
     url(/images/IMG_1762.JPG);
 }
 
 #music-bg {
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.75),
-      rgba(255, 255, 255, 0.75)
-    ),
+  background-image: linear-gradient(rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.75)),
     url(/images/IMG_1757.JPG);
 }
 
 #loops-bg {
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.75),
-      rgba(255, 255, 255, 0.75)
-    ),
+  background-image: linear-gradient(rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.75)),
     url(/images/IMG_1764.JPG);
 }
 
 #programming-bg {
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.75),
-      rgba(255, 255, 255, 0.75)
-    ),
+  background-image: linear-gradient(rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.75)),
     url(/images/IMG_1760.jpg);
 }
 
 #bio-bg {
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.75),
-      rgba(255, 255, 255, 0.75)
-    ),
+  background-image: linear-gradient(rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.75)),
     url(/images/IMG_1768.jpg);
 }
 
 #photos-bg {
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.75),
-      rgba(255, 255, 255, 0.75)
-    ),
+  background-image: linear-gradient(rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.75)),
     url(/images/Imagen7.jpg);
 }
 
-.vids-wrapper {
-  display: grid;
-}
 
 #preloader-bg {
   background: #20c02f;
@@ -515,10 +492,10 @@ section {
   width: 100%;
   position: fixed;
   z-index: 999999;
-  animation: rotation 6s infinite linear;
+  animation: rotation 5s infinite linear;
 }
 
-#contact-bg{
+#contact-bg {
   background-image: url(/images/clouds.jpg);
   justify-content: center;
   background-repeat: no-repeat;
@@ -526,33 +503,141 @@ section {
   height: 100vh;
 }
 
-.footer-imgs{
+.footer-imgs {
   align-items: center;
   justify-content: center;
 }
 
-#amyocolour{
-  position: relative;
-  height: auto;
-  max-width: 50%;
-  
+.section-inner-hero {
+  text-align: right;
+  padding: 5%;
+  width: 100vw;
+  flex-basis: 100vh;
 }
 
-#contact-info{
+#amyocolour {
+  display: flex;
+  position: relative;
+  max-width: 60%;
+  float: right;
+  margin-top: 5vh;
+}
+
+#contact-info {
   height: auto;
   max-width: 40%;
 }
 
-.con-div{
+.con-div {
   border: purple 1px solid;
 }
 
-.favicons{
+.favicons {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
 }
-.favicons img{
+
+.favicons img {
   height: auto;
   max-width: 25%;
+}
+
+.drum-slider{
+width: 180px;
+height: 320px;
+overflow: hidden;
+}
+
+.slider, .drum-slider{
+  display: inline-block; 
+}
+
+/* slideshow container */
+
+
+.slider{
+  overflow: hidden;
+  width: 320px;
+}
+
+.slider figure{
+  position: relative;
+  width: 809%;
+  animation: 25s slider infinite;
+}
+
+.drum-slider figure{
+  position: relative;
+  height: 200%;
+  animation: 11s drum-slider infinite;
+}
+
+.slider figure img{
+  align-self: center;
+}
+
+@keyframes slider{
+  0%{
+    left: 0;
+  }
+  12.5%{
+    left: -102%;
+  }
+  17%{
+    left: -102%;
+  }
+  25%{
+    left: -202%;
+  }
+  30%{
+    left: -202%;
+  }
+  37.5%{
+    left: -303%;
+  }
+  42%{
+    left: -303%;
+  }
+  50%{
+    left: -406%;
+  }
+  55%{
+    left: -406%;
+  }
+  62.5%{
+    left: -506%;
+  }
+  67.5%{
+    left: -506%;
+  }
+  75%{
+    left: -607%;
+  }
+  80%{
+    left: -607%;
+  }
+  89.5%{
+    left: -709%;
+  }
+  
+}
+
+
+@keyframes drum-slider{
+  0%{
+    bottom: 0;
+  }
+ 30%{
+  bottom: 100%;
+ }
+ 60%{
+  bottom: 200%;
+ }
+ 90%{
+  bottom: 300%;
+  }
+ 120%{
+  bottom: 400%;
+    }
 }
