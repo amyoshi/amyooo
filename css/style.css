@@ -278,10 +278,6 @@ span a {
     width: 100%;
   }
 
-  .section-inner {
-    flex-direction: column;
-  }
-
   .column {
     display: none;
   }
@@ -327,17 +323,18 @@ body {
 /* =======================================================*/
 
 .section-inner {
-  padding: 15%;
+  padding: 1%;
   border: #fbda00 solid 3px;
   display: flex;
   flex: 1;
+  align-items: center;
   flex-wrap: wrap;
   margin: auto;
   height: 100%;
   text-align: center;
   width: 100vw;
   flex-basis: 100vh;
- 
+  justify-content: center;
 }
 
 .section-inner-music {
@@ -543,22 +540,29 @@ section {
   max-width: 25%;
 }
 
-.drum-slider{
-width: 180px;
-height: 320px;
-overflow: hidden;
+/* slideshow containers */
+
+.sliders{
+  display: grid;
+  text-align: center;
+  grid-template-areas: 'slider drum-slider sk8-slider fingerbrd-slider'
+                        'bass-slider drum-slider sk8-slider fingerbrd-slider';
 }
 
-.slider, .drum-slider{
-  display: inline-block; 
+.drum-slider, .sk8-slider, .fingerbrd-slider{
+  width: 180px;
+  height: 320px;
+  overflow: hidden;
 }
 
-/* slideshow container */
+.slider, .drum-slider, .sk8-slider, .bass-slider, .fingerbrd-slider{
+  margin: auto;
+}
 
-
-.slider{
+.slider, .bass-slider{
   overflow: hidden;
   width: 320px;
+  height: 180px;
 }
 
 .slider figure{
@@ -567,14 +571,50 @@ overflow: hidden;
   animation: 25s slider infinite;
 }
 
+/* grid area */
+.slider{
+  grid-area: slider;
+}
+
+.drum-slider{
+  grid-area: drum-slider;
+}
+
+.sk8-slider{
+  grid-area: sk8-slider;
+}
+
+.bass-slider{
+  grid-area: bass-slider;
+}
+
+.fingerbrd-slider{
+  grid-area: fingerbrd-slider;
+}
+
 .drum-slider figure{
   position: relative;
-  height: 200%;
   animation: 11s drum-slider infinite;
 }
 
-.slider figure img{
-  align-self: center;
+.sk8-slider figure{
+  position: relative;
+  animation: 18s sk8-slider reverse infinite;
+}
+
+.bass-slider figure{
+  position: relative;
+  width: 505%;
+  animation: 12s bass-slider reverse infinite;
+}
+
+.fingerbrd-slider figure{
+  position: relative;
+  animation: 18s fingerbrd-slider infinite;
+}
+
+.bass-slider{
+  position: relative;
 }
 
 @keyframes slider{
@@ -623,10 +663,9 @@ overflow: hidden;
   
 }
 
-
 @keyframes drum-slider{
   0%{
-    bottom: 0;
+  bottom: 0;
   }
  30%{
   bottom: 100%;
@@ -640,4 +679,77 @@ overflow: hidden;
  120%{
   bottom: 400%;
     }
+}
+
+@keyframes sk8-slider{
+  0%{
+    bottom: 0;
+  }
+  25%{
+    bottom: 100%;
+  }
+  50%{
+    bottom: 200%;
+  }
+  75%{
+    bottom: 300%;
+  }
+  100%{
+    bottom: 400%
+  }
+}
+
+@keyframes bass-slider{
+  0%{
+    left: 0;
+  }
+  25%{
+    left: -100%;
+  }
+  50%{
+    left: -200%;
+  }
+  75%{
+    left: -300%;
+  }
+  100%{
+    left: -405%
+  }
+}
+
+
+@keyframes fingerbrd-slider{
+  0%{
+    bottom: 0;
+  }
+  25%{
+    bottom: 100%;
+  }
+  50%{
+    bottom: 200%;
+  }
+  75%{
+    bottom: 300%;
+  }
+  100%{
+    bottom: 400%
+  }
+}
+
+#programming-bg strong{
+  animation: color-change 5s infinite;
+}
+
+@keyframes color-change {
+  0% { color: rgb(194, 37, 37); }
+  10% { color: rgb(254, 172, 18); }
+  20% { color: yellow; }
+  30% {color: green; }
+  40% {color: rgb(68, 120, 231) }
+  50% {color: rgb(39, 70, 224); }
+  60% { color: rgb(142, 92, 234); }
+  70% { color: rgb(95, 34, 227); }
+  80% { color: rgb(145, 20, 240); }
+  90% {color: rgb(181, 16, 222); }
+  100% {color: rgb(233, 34, 110); }
 }
