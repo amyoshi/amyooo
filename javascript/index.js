@@ -21,13 +21,14 @@ let wait3seconds = function () {
 window.addEventListener("load", wait3second);
 window.addEventListener("load", wait3seconds);
 
+// to keep styling on active nav links //
+const activePage = window.location.pathname;
+const navLinks = document.querySelectorAll("nav a").forEach((link) => {
+  console.log(link.href);
+});
+
 /* function calls menu element, gives menu the class open and toggles it */
-let logo = document.getElementbyId("amyo");
 
 function toggleMobileMenu(menu) {
   menu.classList.toggle("open");
 }
-
-/* thumbnail carousel */
-
-/* photo carousel */

@@ -114,6 +114,10 @@ span a {
   width: 46%;
 }
 
+#video-bg .title{
+  float: left;
+}
+
 .demo-title {
   font-family: "Nunito", sans-serif;
   white-space: nowrap;
@@ -142,23 +146,12 @@ span a {
   align-self: center;
 }
 
-.column {
-  display: flex;
-  align-self: center;
-  border: chartreuse solid 3px;
-  padding: 5px;
-  display: inline-block;
-  width: 30%;
-}
-
-
 /* .example > .music-img {order: 1; } /* Will be displayed first  */
 /* .example > .column {order: 3; } /* Will be displayed third */
 /* .example > .button-container {order: 2; } /* Will be displayed second  */
 
 .nav-button {
   font-family: "porkysregular";
-  
   text-decoration: none;
   letter-spacing: 2px;
   border-radius: 50px;
@@ -168,6 +161,16 @@ span a {
   color: yellow;
   font-weight: bold;
   cursor: pointer;
+}
+
+
+/* can us :is() for these? */
+.nav-button:hover {
+  color: white;
+}
+
+.active{
+  color: white;
 }
 
 /* ========== hamburger menu for mobile view ===========*/
@@ -231,8 +234,6 @@ span a {
   color: white;
 }
 
-
-
 .programming-img {
   display: inline-block;
   text-align: center;
@@ -250,42 +251,6 @@ span a {
 
 .music-img-container {
   float: left;
-}
-
-/* when screen width is < 1000px, nav vanishes and hamburger menu shown instead */
-
-@media only screen and (max-width: 1000px) {
-  nav :nth-child(2),
-  nav :nth-child(3),
-  nav :nth-child(4),
-  nav :nth-child(5)
-  {
-    display: none;
-  }
-
-  #hamburger-icon {
-    display: block;
-  }
-
-  nav *{
-    display: flex;
-    justify-content: left;
-  }
-
-  .mobile-menu {
-    background: var(--background);
-    height: 100%;
-    width: 100%;
-  }
-
-  .column {
-    display: none;
-  }
-
-  .logo {
-    display: block;
-    float: left;
-  }
 }
 
 main {
@@ -315,35 +280,19 @@ body::-webkit-scrollbar-thumb {
 }
 */
 
-body {
-  
-  border: red solid;
-}
-
 /* =======================================================*/
 
 .section-inner {
   padding: 1%;
   border: #fbda00 solid 3px;
   display: flex;
-  flex: 1;
   align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
   margin: auto;
   height: 100%;
   text-align: center;
   width: 100vw;
-  flex-basis: 100vh;
   justify-content: center;
-}
-
-.section-inner-music {
-  display: flex;
-  flex: 1;
-  flex-basis: 100vh;
-  padding: 5vw;
-  width: 100%;
-  height: 100vh;
 }
 
 .demo-container {
@@ -370,8 +319,8 @@ body {
 /* fix section styling for bio section */
 
 section {
+  display: flex;
   flex-direction: column;
-  height: 100vh;
 }
 
 #hero {
@@ -426,12 +375,13 @@ section {
 /*==========================================*/
 
 #video-bg,
-#music-bg,
+#blog-bg,
 #loops-bg,
 #programming-bg,
 #bio-bg,
 #photos-bg,
-#contact-bg {
+#contact-bg 
+#loops-bg{
   background-size: cover;
   background-position: center;
   width: 100vw;
@@ -443,7 +393,7 @@ section {
     url(/images/IMG_1762.JPG);
 }
 
-#music-bg {
+#blog-bg {
   background-image: linear-gradient(rgba(255, 255, 255, 0.75),
       rgba(255, 255, 255, 0.75)),
     url(/images/IMG_1757.JPG);
@@ -473,6 +423,12 @@ section {
     url(/images/Imagen7.jpg);
 }
 
+#loops-bg{
+  background-image: linear-gradient(rgba(255, 255, 255, 0.75),
+   rgba(255, 255, 255, 0.75)),
+   url(/images/loopbg.jpg);
+}
+
 
 #preloader-bg {
   background: #20c02f;
@@ -497,7 +453,6 @@ section {
   justify-content: center;
   background-repeat: no-repeat;
   padding: 5%;
-  height: 100vh;
 }
 
 .footer-imgs {
@@ -546,6 +501,8 @@ section {
   display: grid;
   text-align: center;
   grid-template-areas: 'slider drum-slider sk8-slider fingerbrd-slider'
+                        'slider drum-slider sk8-slider fingerbrd-slider'
+                        'bass-slider drum-slider sk8-slider fingerbrd-slider'
                         'bass-slider drum-slider sk8-slider fingerbrd-slider';
 }
 
@@ -752,4 +709,53 @@ section {
   80% { color: rgb(145, 20, 240); }
   90% {color: rgb(181, 16, 222); }
   100% {color: rgb(233, 34, 110); }
+}
+
+.yt-channels{
+  align-self: center;
+  padding: 2%;
+}
+
+/* when screen width is < 1000px, nav vanishes and hamburger menu shown instead */
+
+@media only screen and (max-width: 1000px) {
+  nav :nth-child(2),
+  nav :nth-child(3),
+  nav :nth-child(4),
+  nav :nth-child(5),
+  nav :nth-child(6)
+  {
+    display: none;
+  }
+
+  #hamburger-icon {
+    display: block;
+  }
+
+  nav *{
+    display: flex;
+    justify-content: left;
+  }
+
+  .mobile-menu {
+    background: var(--background);
+    height: 100%;
+    width: 100%;
+  }
+
+  .logo {
+    display: block;
+    float: left;
+  }
+
+ 
+
+  .sliders{
+    justify-content: center;  
+    grid-template-areas: 'slider'
+                        'fingerbrd-slider'
+                        'bass-slider'
+                        'drum-slider' 
+                        'sk8-slider';                  
+  }
 }

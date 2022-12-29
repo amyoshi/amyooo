@@ -7,10 +7,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>aMy O</title>
-  <!-- will appear in tab as site name-->
-  <link rel="stylesheet" href="/css/style.css" />
-  <!-- reference stylesheet -->
+  <title>aMy O</title> <!-- will appear in tab as site name-->
+  <link rel="stylesheet" href="/css/style.css" /> <!-- reference stylesheet -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
 
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -33,9 +31,10 @@
     <nav>
       <span>
         <a href ="/index.html"><img src="/images/amyocolour.png" alt="aMy O" class="logo"></a>
+        <a href="/loops.html" class="nav-button">loops</a>
         <a href="/video.html" class="nav-button">video</a>
-        <a href="#programming-bg" class="nav-button">blog</a>
-        <a href="#photos-bg" class="nav-button">photos</a>
+        <a href="/blog.html" class="nav-button">blog</a>
+        <a href="/photos.html" class="nav-button">photos</a>
         <a href="#contact-bg" class="nav-button">contact</a>
       </span>
     </nav>
@@ -48,14 +47,15 @@
       <div class="bar2"></div>
       <div class="bar3"></div>
       <ul class="mobile-menu">
+        <li><a href="/loops.html" class="nav-button">LOOPS</a></li>
         <li><a href="/video.html" class="nav-button">VIDEO</a></li>
-        <li><a href="#programming-bg" class="nav-button">BLOG</a></li>
-        <li><a href="#photos-bg" class="nav-button">PHOTOS</a></li>
+        <li><a href="/blog.html" class="nav-button">BLOG</a></li>
+        <li><a href="/photos.html" class="nav-button">PHOTOS</a></li>
         <li><a href="#contact-bg" class="nav-button">CONTACT</a></li>
       </ul>
     </div>
   </header>
-  <script src="/javascript/index.js"></script>
+  
   <main>
     <!--------------------- Hero section ----------------------->
     <section id="hero">
@@ -122,22 +122,30 @@
         </figure>
       </div>
     </div>
-    <script src="https://apis.google.com/js/platform.js"></script>
-        <div class="yt-channels">
-          <div class="g-ytsubscribe" data-channelid="UCjXIp2cmMXb2KM3kVlFB_bA" data-layout="full" data-count="default">
-          </div>
-          <script src="https://apis.google.com/js/platform.js"></script>
-
-          <div class="g-ytsubscribe" data-channelid="UCVbWbWqSnHVwrO4hjVvGoEQ" data-layout="full" data-count="default">
-          </div>
-          <script src="https://apis.google.com/js/platform.js"></script>
-  </div>
+    <div class="yt-channels">
+      <script src="https://apis.google.com/js/platform.js"></script>
+      <div class="g-ytsubscribe" data-channelid="UCjXIp2cmMXb2KM3kVlFB_bA" data-layout="full" data-count="default">
+      </div>
+      <script src="https://apis.google.com/js/platform.js"></script>
+  
+      <div class="g-ytsubscribe" data-channelid="UCVbWbWqSnHVwrO4hjVvGoEQ" data-layout="full" data-count="default">
+      </div>
+      <script src="https://apis.google.com/js/platform.js"></script>
+    </div>  
+</div>
 </section>
 
-
+  <main>
     <!-------------------- Music section ----------------------->
-    <section id="music-bg">
-      <div class="section-inner-music">
+    <section id="blog-bg">
+      <div class="section-inner">
+        <h1>Blog section here!</h1>
+      </div>
+    </section>
+    
+    <!-------------------- Loops section ----------------------->
+    <section id="loops-bg">
+      <div class="section-inner">
         <div class="demo-container">
           <div class="title">Amy O's Demo</div>
           <img id="music-img" alt="Amy O's Demo" src="/images/ab67616d0000b27351f80b6773fb2fac48b9b74f.jpeg" />
@@ -154,13 +162,6 @@
             <source src="audio/13 Vices - Real Like You (demo).mp3" type="audio/mpeg" />
           </audio>
         </div>
-      </div>
-    </section>
-    
-    <!-------------------- Loops section ----------------------->
-    <section id="loops-bg">
-      <div class="section-inner">
-        
         </div>
       </div>
     </section>
@@ -176,17 +177,8 @@
       </div>
     </section>
 
-    <section id="photos-bg">
-      <div class="section-inner">
-        <img src="/images/happysad.jpg" alt="" width="25%" />
-        <img src="/images/IMG_5776.jpg" alt="" width="25%" />
-      </div>
-    </section>
-
     <section id="contact-bg">
-
       <div class="footer-imgs">
-
         <img id="contact-info" src="/images/contactinfo.png" alt="" />
       </div>
       <div class="favicons">
@@ -194,10 +186,10 @@
         <img src="/images/instagram-old-100.png" />
         <img src="/images/youtube-logo-100.png" />
         <img src="/images/share-100.png" />
+        <a href="http://amyo.123Guestbook.com/" target="aMy O's Guestbook">Sign my guestbook!</a>
       </div>
-      <p>Don't be a stranger, sign the guestbook!</p>
     </section>
   </main>
+  <script src="/javascript/index.js"></script> <!-- reference script -->
 </body>
-
 </html>
