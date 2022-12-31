@@ -284,6 +284,7 @@ body::-webkit-scrollbar-thumb {
 
 .section-inner {
   padding: 1%;
+  padding-top: 12vh;
   border: #fbda00 solid 3px;
   display: flex;
   align-items: center;
@@ -477,7 +478,13 @@ section {
 
 #contact-info {
   height: auto;
-  max-width: 40%;
+  max-width: 25%;
+}
+
+#plane{
+  height: auto;
+  width: 60%;
+  float: right;
 }
 
 .con-div {
@@ -486,13 +493,9 @@ section {
 
 .favicons {
   display: flex;
+  border: 2%;
   justify-content: space-between;
   flex-direction: row;
-}
-
-.favicons img {
-  height: auto;
-  max-width: 25%;
 }
 
 /* slideshow containers */
@@ -758,4 +761,12 @@ section {
                         'drum-slider' 
                         'sk8-slider';                  
   }
+}
+
+.bass-face-container { 
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: repeat(2, 1fr); 
+  grid-column-gap: 5px;
+  grid-row-gap: 5px; 
 }

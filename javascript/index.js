@@ -21,10 +21,18 @@ let wait3seconds = function () {
 window.addEventListener("load", wait3second);
 window.addEventListener("load", wait3seconds);
 
+// keeps contact nav btn inactive //
+function contact() {
+  const contactbtn = document.getElementById("contact-bg");
+  contactbtn.scrollIntoView();
+}
+
 // to keep styling on active nav links //
 const activePage = window.location.pathname;
 const navLinks = document.querySelectorAll("nav a").forEach((link) => {
-  console.log(link.href);
+  if (link.href.includes(`${activePage}`)) {
+    link.classList.add("active");
+  }
 });
 
 /* function calls menu element, gives menu the class open and toggles it */

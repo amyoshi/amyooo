@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML 5 Boilerplate</title>
     <link rel="stylesheet" href="/css/style.css">
-    <script src="/javascript/index.js"></script>
+    <script src="/javascript/index.js" defer></script>
   </head>
   <body>
     <!--4 divs for website border-->
@@ -22,7 +22,7 @@
         <a href="/video.html" class="nav-button">video</a>
         <a href="/blog.html" class="nav-button">blog</a>
         <a href="/photos.html" class="nav-button">photos</a>
-        <a href="#contact-bg" class="nav-button">contact</a>
+        <a class="nav-button" onclick="contact()">contact</a></li>
       </span>
     </nav>
 
@@ -38,7 +38,7 @@
         <li><a href="/video.html" class="nav-button">VIDEO</a></li>
         <li><a href="/blog.html" class="nav-button">BLOG</a></li>
         <li><a href="/photos.html" class="nav-button">PHOTOS</a></li>
-        <li><a href="#contact-bg" class="nav-button">CONTACT</a></li>
+        <li><a class="nav-button" onclick="contact()">CONTACT</a></li>
       </ul>
     </div>
   </header>

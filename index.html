@@ -15,6 +15,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
+  <script src="/javascript/index.js" defer></script> <!-- reference script @ bottom of head -->
 </head>
 
 <body>
@@ -35,7 +36,7 @@
         <a href="/video.html" class="nav-button">video</a>
         <a href="/blog.html" class="nav-button">blog</a>
         <a href="/photos.html" class="nav-button">photos</a>
-        <a href="#contact-bg" class="nav-button">contact</a>
+        <a class="nav-button" onclick="contact()">contact</a></li>
       </span>
     </nav>
 
@@ -51,7 +52,7 @@
         <li><a href="/video.html" class="nav-button">VIDEO</a></li>
         <li><a href="/blog.html" class="nav-button">BLOG</a></li>
         <li><a href="/photos.html" class="nav-button">PHOTOS</a></li>
-        <li><a href="#contact-bg" class="nav-button">CONTACT</a></li>
+        <li><a class="nav-button" onclick="contact()">CONTACT</a></li>
       </ul>
     </div>
   </header>
@@ -72,53 +73,54 @@
       <div class="slider">
         <figure>
           <!-- loops -->
-          <img src="/images/thumbnails/phil.jpg" />
-          <img src="/images/thumbnails/nerd.jpg" />
-          <img src="/images/thumbnails/rih.jpg" />
-          <img src="/images/thumbnails/steve.jpg" />
-          <img src="/images/thumbnails/britney.jpg" />
-          <img src="/images/thumbnails/frank.jpg" />
-          <img src="/images/thumbnails/tyler.jpg" />
-          <img src="/images/thumbnails/phil.jpg" />
+          <a href="loops.html"><img src="/images/thumbnails/phil.jpg" />
+            <img src="/images/thumbnails/nerd.jpg" />
+            <img src="/images/thumbnails/rih.jpg" />
+            <img src="/images/thumbnails/steve.jpg" />
+            <img src="/images/thumbnails/britney.jpg" />
+            <img src="/images/thumbnails/frank.jpg" />
+            <img src="/images/thumbnails/tyler.jpg" />
+            <img src="/images/thumbnails/phil.jpg" />
+          </a>
         </figure>
       </div>
       <div class="bass-slider">
         <figure>
           <!-- bass face -->
-          <img src="/images/IMG_9479_320x180.jpg" />
+         <a href="/video.html#bass-face"> <img src="/images/IMG_9479_320x180.jpg" />
           <img src="/images/IMG_0460_320x180.jpg" />
           <img src="/images/IMG_0499_320x180.jpg" />
           <img src="/images/IMG_0461_320x180.jpg" />
-          <img src="/images/IMG_9479_320x180.jpg" />
+          <img src="/images/IMG_9479_320x180.jpg" /></a>
         </figure>
       </div>
       <div class="drum-slider">
         <figure>
           <!-- drum chum -->
-          <img src="/images/IMG_4829_180x320.jpg" />
+          <a href="/video.html#drum-chum"><img src="/images/IMG_4829_180x320.jpg" />
           <img src="/images/IMG_8603_180x320.jpg" />
           <img src="/images/IMG_1105_180x320.jpg" />
-          <img src="/images/IMG_4829_180x320.jpg" />
+          <img src="/images/IMG_4829_180x320.jpg" /></a>
       </div>
       </figure>
       <div class="sk8-slider">
         <figure>
           <!-- sk8 m8 -->
-          <img src="images/IMG_7364_180x320.jpg" />
+          <a href="/video.html#sk8-m8"><img src="images/IMG_7364_180x320.jpg" />
           <img src="images/IMG_7406_180x320.jpg" />
           <img src="images/7B8B423B-364C-435E-81D7-6A235963E437_2_180x320.jpg" />
           <img src="images/IMG_9269_1_320x180.jpg" />
-          <img src="/images/IMG_7364_180x320.jpg" />
+          <img src="/images/IMG_7364_180x320.jpg" /></a>
         </figure>
       </div>
       <div class="fingerbrd-slider">
         <figure>
           <!-- 4ngrbrd -->
-          <img src="/images/IMG_0500_1_180x320.jpg" />
+          <a href="/video.html#4ngrbrd"><img src="/images/IMG_0500_1_180x320.jpg" />
           <img src="/images/IMG_0501_1_180x320.jpg" />
           <img src="/images/IMG_0502_2_180x320.jpg" />
           <img src="/images/IMG_0503_180x320.jpg" />
-          <img src="images/IMG_0500_1_180x320.jpg" />
+          <img src="images/IMG_0500_1_180x320.jpg" /></a>
         </figure>
       </div>
     </div>
@@ -181,15 +183,26 @@
       <div class="footer-imgs">
         <img id="contact-info" src="/images/contactinfo.png" alt="" />
       </div>
+      <div class="guestbook">
+        <a href="http://amyo.123Guestbook.com/" target="aMy O's Guestbook">
+          <div class="footer-imgs">
+            <img id="plane" src="/images/guestbookairplane.png" alt="" />
+          </div>
+        </a>
+      </div>
       <div class="favicons">
-        <img src="/images/shrug-emoticon-100.png" />
-        <img src="/images/instagram-old-100.png" />
-        <img src="/images/youtube-logo-100.png" />
-        <img src="/images/share-100.png" />
-        <a href="http://amyo.123Guestbook.com/" target="aMy O's Guestbook">Sign my guestbook!</a>
+        <div id="gmail">
+          <a href="mailto:amyonwoo@gmail.com" ><img src="/images/gmail-logo-100.png" /></a>
+        </div>
+        <div id="instagram">
+          <a href="http://instagram.com/amy.ooooo"><img src="/images/instagram-old-100.png" /></a>
+        </div>
+        <div id="youtube">
+          <a href="http://youtube.com/@amyo"><img src="/images/youtube-logo-100.png" /><a>
+        </div>
+        
       </div>
     </section>
   </main>
-  <script src="/javascript/index.js"></script> <!-- reference script -->
 </body>
 </html>

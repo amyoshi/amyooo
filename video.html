@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="/css/style.css">
   <script src="/javascript/index.js" defer></script> <!--  -->
 </head>
-
+ 
 <body>
   <div id="preloader"></div>
   <div id="preloader-bg"></div>
@@ -26,7 +26,7 @@
         <a href="/video.html" class="nav-button">video</a>
         <a href="/blog.html" class="nav-button">blog</a>
         <a href="/photos.html" class="nav-button">photos</a>
-        <a href="#contact-bg" class="nav-button">contact</a>
+        <a class="nav-button" onclick="contact()">contact</a></li>
       </span>
     </nav>
 
@@ -42,7 +42,7 @@
         <li><a href="/video.html" class="nav-button">VIDEO</a></li>
         <li><a href="/blog.html" class="nav-button">BLOG</a></li>
         <li><a href="/photos.html" class="nav-button">PHOTOS</a></li>
-        <li><a href="#contact-bg" class="nav-button">CONTACT</a></li>
+        <li><a class="nav-button" onclick="contact()">CONTACT</a></li>
       </ul>
     </div>
   </header>
@@ -53,34 +53,68 @@
         <div class="title">
           Video Gallery
         </div>
-        <div class="title">
-          Drum Chum
+        <div class="drum-chum-container">
+          <div class="title" id="drum-chum">
+            Drum Chum
+          </div>
         </div>
-        <div class="title">
+        <div class="title" id="sk8-m8">
           Sk8 M8
         </div>
-        <div class="title">
+        <div class="title" id="4ngrbrd">
           4ngrbrd
         </div>
-        <div class="title">
+        <div class="title" id="bass-face">
           Bass Face
+        </div>
+        <div class="bass-face-container">
+          <div class="div1"><iframe width="560" height="315" src="https://www.youtube.com/embed/0zfEbEoTBGg"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe></div>
+          <div class="div2"><iframe width="560" height="315" src="https://www.youtube.com/embed/A801HAoUgzA"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe></div>
+          <div class="div3"><iframe width="560" height="315" src="https://www.youtube.com/embed/bhre0TCMXeM"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe></div>
+          <div class="div4"><iframe width="560" height="315" src="https://www.youtube.com/embed/adlOSGuj4MA"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe></div>
+          <div class="div5"><iframe width="560" height="315" src="https://www.youtube.com/embed/u2HK4d5FB_0"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe></div>
         </div>
       </div>
     </section>
 
     <section id="contact-bg">
-
       <div class="footer-imgs">
-
         <img id="contact-info" src="/images/contactinfo.png" alt="" />
       </div>
-      <div class="favicons">
-        <img src="/images/shrug-emoticon-100.png" />
-        <img src="/images/instagram-old-100.png" />
-        <img src="/images/youtube-logo-100.png" />
-        <img src="/images/share-100.png" />
+      <div class="guestbook">
+        <a href="http://amyo.123Guestbook.com/" target="aMy O's Guestbook">
+          <div class="footer-imgs">
+            <img id="plane" src="/images/guestbookairplane.png" alt="" />
+          </div>
+        </a>
       </div>
-      <p>Don't be a stranger, sign the guestbook!</p>
+      <div class="favicons">
+        <div id="gmail">
+          <a href="mailto:amyonwoo@gmail.com" ><img src="/images/gmail-logo-100.png" /></a>
+        </div>
+        <div id="instagram">
+          <a href="http://instagram.com/amy.ooooo"><img src="/images/instagram-old-100.png" /></a>
+        </div>
+        <div id="youtube">
+          <a href="http://youtube.com/@amyo"><img src="/images/youtube-logo-100.png" /><a>
+        </div>
+        
+      </div>
     </section>
   </main>
 </body>
