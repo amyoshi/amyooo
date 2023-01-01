@@ -26,6 +26,7 @@ p {
 
 .logo{
   height: 9vh;
+  float: right;
 }
 
 button {
@@ -70,6 +71,10 @@ header {
   z-index: 1234;
 }
 
+#hamburger-icon{
+  padding-top: 2vh;
+}
+
 nav {
   display: flex;
   width: 100%;
@@ -95,6 +100,10 @@ nav>* {
 nav a:hover {
   color: white;
   cursor: pointer;
+}
+
+span{
+  vertical-align: middle;
 }
 
 span a {
@@ -284,7 +293,6 @@ body::-webkit-scrollbar-thumb {
 
 .section-inner {
   padding: 1%;
-  padding-top: 12vh;
   border: #fbda00 solid 3px;
   display: flex;
   align-items: center;
@@ -365,7 +373,7 @@ section {
 
 #top {
   top: 0;
-  height: 12vh;
+  height: 10vh;
 }
 
 #bottom {
@@ -381,8 +389,7 @@ section {
 #programming-bg,
 #bio-bg,
 #photos-bg,
-#contact-bg 
-#loops-bg{
+#contact-bg{
   background-size: cover;
   background-position: center;
   width: 100vw;
@@ -468,22 +475,22 @@ section {
   flex-basis: 100vh;
 }
 
-#amyocolour {
+.logo {
   display: flex;
-  position: relative;
-  max-width: 60%;
-  float: right;
-  margin-top: 5vh;
+  max-width: 55%;
+  height: auto;
+  vertical-align: middle;
+  
 }
 
 #contact-info {
   height: auto;
-  max-width: 25%;
+  max-width: 20%;
 }
 
 #plane{
   height: auto;
-  width: 60%;
+  max-width: 60%;
   float: right;
 }
 
@@ -494,8 +501,14 @@ section {
 .favicons {
   display: flex;
   border: 2%;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-direction: row;
+}
+
+.favicons img{
+  justify-content: space-evenly;
+  max-width: 100%;
+  height: auto;
 }
 
 /* slideshow containers */
@@ -507,6 +520,8 @@ section {
                         'slider drum-slider sk8-slider fingerbrd-slider'
                         'bass-slider drum-slider sk8-slider fingerbrd-slider'
                         'bass-slider drum-slider sk8-slider fingerbrd-slider';
+  grid-column-gap: 7px;
+  grid-row-gap: 7px;
 }
 
 .drum-slider, .sk8-slider, .fingerbrd-slider{
@@ -749,17 +764,23 @@ section {
   .logo {
     display: block;
     float: left;
+    position: relative;
+    left: 0;
   }
-
- 
 
   .sliders{
     justify-content: center;  
-    grid-template-areas: 'slider'
-                        'fingerbrd-slider'
-                        'bass-slider'
-                        'drum-slider' 
-                        'sk8-slider';                  
+    grid-template-areas: 'slider slider'
+                        'bass-slider bass-slider'
+                        'drum-slider sk8-slider' 
+                        'fingerbrd-slider yt-channels';   
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;                
+  }
+  
+  .yt-channels{
+    display: flex;
+    flex-direction: column;
   }
 }
 
