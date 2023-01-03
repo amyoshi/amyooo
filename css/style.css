@@ -513,17 +513,6 @@ section {
 
 /* slideshow containers */
 
-.sliders{
-  display: grid;
-  text-align: center;
-  grid-template-areas: 'slider drum-slider sk8-slider fingerbrd-slider'
-                        'slider drum-slider sk8-slider fingerbrd-slider'
-                        'bass-slider drum-slider sk8-slider fingerbrd-slider'
-                        'bass-slider drum-slider sk8-slider fingerbrd-slider';
-  grid-column-gap: 7px;
-  grid-row-gap: 7px;
-}
-
 .drum-slider, .sk8-slider, .fingerbrd-slider{
   width: 180px;
   height: 320px;
@@ -766,16 +755,6 @@ section {
     float: left;
     position: relative;
     left: 0;
-  }
-
-  .sliders{
-    justify-content: center;  
-    grid-template-areas: 'slider slider'
-                        'bass-slider bass-slider'
-                        'drum-slider sk8-slider' 
-                        'fingerbrd-slider yt-channels';   
-    grid-column-gap: 4px;
-    grid-row-gap: 4px;                
   }
   
   .yt-channels{
