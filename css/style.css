@@ -68,10 +68,11 @@ header {
   position: fixed;
   width: 100%;
   z-index: 1234;
+  padding-top: 1vh;
 }
 
 #hamburger-icon{
-  padding-top: 2vh;
+  padding-top: 1vh;
 }
 
 nav {
@@ -105,10 +106,6 @@ span{
   vertical-align: middle;
 }
 
-span a {
-  padding: 2vw;
-}
-
 .title {
   font-family: "Nunito", sans-serif;
   white-space: nowrap;
@@ -120,10 +117,6 @@ span a {
   border: 10px solid green;
   margin: 5px 0px 0px 0px;
   width: 46%;
-}
-
-#video-bg {
-  padding-top: 10vh;
 }
 
 .demo-title {
@@ -139,7 +132,7 @@ span a {
 }
 
 .my-button {
-  font-family: "porkysregular";
+  font-family: "Nunito", sans-serif;
   letter-spacing: 1px;
   border-radius: 50px;
   border: 2px solid #000;
@@ -158,18 +151,18 @@ span a {
 /* .example > .column {order: 3; } /* Will be displayed third */
 /* .example > .button-container {order: 2; } /* Will be displayed second  */
 
-.nav-button {
-  font-family: "porkysregular";
-  text-decoration: none;
-  letter-spacing: 2px;
-  border-radius: 50px;
-  border: 2px solid #000;
-  padding: 5px 30px;
-  background: rgb(232, 51, 31);
-  color: yellow;
-  font-weight: bold;
-  cursor: pointer;
-}
+  .nav-button {
+    font-family: "porkysregular";
+    text-decoration: none;
+    letter-spacing: 2px;
+    border-radius: 50px;
+    border: 2px solid #000;
+    padding: 5px 30px;
+    background: rgb(232, 51, 31);
+    color: yellow;
+    font-weight: bold;
+    cursor: pointer;
+  }
 
 
 /* can us :is() for these? */
@@ -287,16 +280,16 @@ body::-webkit-scrollbar-thumb {
 
 /* =======================================================*/
 
+section{
+  border: rgba(245, 225, 4, 0.987) 1px solid;
+}
+
 .section-inner {
-  padding: 1%;
-  border: #fbda00 solid 3px;
   display: flex;
   align-items: center;
   flex-direction: column;
   margin: auto;
-  height: 100%;
   text-align: center;
-  width: 100vw;
   justify-content: center;
 }
 
@@ -377,6 +370,7 @@ body::-webkit-scrollbar-thumb {
 /*==========================================*/
 
 #video-bg,
+#video-bg-1,
 #blog-bg,
 #loops-bg,
 #programming-bg,
@@ -385,9 +379,10 @@ body::-webkit-scrollbar-thumb {
 #contact-bg{
   background-size: cover;
   background-position: center;
+  padding: 10vw;
 }
 
-#video-bg {
+#video-bg, #video-bg-1 {
   background-image: linear-gradient(rgba(255, 255, 255, 0.75),
       rgba(255, 255, 255, 0.75)),
     url(/images/IMG_1762.JPG);
@@ -457,7 +452,7 @@ body::-webkit-scrollbar-thumb {
 
 .logo {
   display: flex;
-  max-width: 55%;
+  max-width: 140px;
   height: auto;
   vertical-align: middle;
   
@@ -511,6 +506,91 @@ body::-webkit-scrollbar-thumb {
 
 .favicons img{
   padding: 1vw;
+}
+ 
+  @keyframes marching-ants {
+    0% {
+      background-position: 0 0, 50px 100%, 0 50px, 100% 0;
+    }
+
+    100% {
+      background-position: 50px 0, 0 100%, 0 0, 100% 50px;
+    }
+  }
+
+
+ #title{
+  width: 100%;
+  padding: 10px 0px 0px 10px;
+  align-self: center;
+  color: yellow;
+ }
+
+  .dashed-border {
+   width: 100%;
+   max-width: 320px;
+  }
+  
+  #space{
+   display: hidden;
+   padding: 1vh;
+  }
+
+  #space-two{
+    display: hidden;
+    padding: 5vh;
+  }
+
+  div.dashed-border {
+    background-color: red;
+    background-image: linear-gradient(90deg, yellow 50%, red 50%), linear-gradient(90deg, yellow 50%, red 50%), linear-gradient(0, yellow 50%, red 50%), linear-gradient(0, yellow 50%, red 50%);
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-size: 50px 5px, 50px 5px, 5px 50px, 5px 50px;
+    animation: marching-ants 700ms infinite linear;
+  }
+  
+  p.dashed-border{
+    justify-content: center;
+  }
+
+.carousel{
+  align-self: center;
+}
+
+.boxes{
+  text-align: center;
+  flex-direction: column;
+}
+
+.section-inner-video{
+  flex-direction: column;
+}
+
+.yt-channels{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.drum-chum,.bass-face,.sk8-m8,.fingrbrd {
+  
+  padding: 100px;
+  margin: 20px;
+}
+.drum-chum{
+  border: 10px solid rgb(37, 96, 221);
+}
+
+.bass-face{
+  border: 10px solid rgb(219, 51, 51);
+}
+
+.sk8-m8{
+  border: 10px solid rgb(251, 218, 0);
+}
+
+.fingrbrd{
+  border: 10px solid rgb(38, 145, 6);
 }
 
 /* slideshow containers */
@@ -766,10 +846,6 @@ body::-webkit-scrollbar-thumb {
     position: relative;
   }
   
-  .yt-channels{
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 .carousel-item img{
@@ -780,7 +856,6 @@ body::-webkit-scrollbar-thumb {
 #video-bg {
   /* Prevent vertical gaps */
   line-height: 0;
-  
   -webkit-column-count: 5;
   -webkit-column-gap:   0px;
   -moz-column-count:    5;
@@ -795,36 +870,15 @@ body::-webkit-scrollbar-thumb {
  height: auto !important;
 }
 
-@media (max-width: 1200px) {
- #video-bg {
- -moz-column-count:    4;
- -webkit-column-count: 4;
- column-count:         4;
- }
-}
-@media (max-width: 1000px) {
- #video-bg {
- -moz-column-count:    3;
- -webkit-column-count: 3;
- column-count:         3;
- }
-}
-@media (max-width: 800px) {
- #video-bg {
- -moz-column-count:    2;
- -webkit-column-count: 2;
- column-count:         2;
- }
-}
-@media (max-width: 400px) {
- #video-bg {
- -moz-column-count:    1;
- -webkit-column-count: 1;
- column-count:         1;
- }
-}
 
 body {
  margin: 0;
  padding: 0;
+}
+
+@media only screen and (max-width: 700px) {
+  .yt-channels{
+    display: flex;
+    flex-direction: column;
+  }
 }
