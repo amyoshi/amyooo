@@ -14,6 +14,10 @@ p {
   font-family: "Nunito", sans-serif;
 }
 
+a:hover{
+  text-decoration: none;
+}
+
 :root {
   --background: url(/images/green-bg.jpg);
 }
@@ -178,7 +182,7 @@ span{
 
 #hamburger-icon {
   position: fixed;
-  right: 25px;
+  right: 10px;
   top: 1vh;
   display: none;
   cursor: pointer;
@@ -242,9 +246,10 @@ span{
 
 #music-img {
   display: flex;
-  max-width: 30%;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
   align-self: center;
-  padding: 2%;
 }
 
 .music-img-container {
@@ -308,10 +313,8 @@ section{
   justify-content: center;
   align-self: center;
   align-items: center;
-  border: purple solid 2px;
   height: auto;
-  width: 40%;
-  padding: 5%;
+  width: 100%;
 }
 
 /* fix section styling for bio section */
@@ -463,14 +466,17 @@ section{
  
 }
 
-#plane{
-  /* scale both up and down on responsiveness */
-  max-width: 100%;
-  height: auto; 
+.plane{
+  position: relative;
+  justify-content: center;
+  bottom: 30vh;
 }
 
-.con-div {
-  border: purple 1px solid;
+#plane{
+  justify-self: center;
+  width: 100%;
+  max-width: 700px;
+  height: auto; 
 }
 
 #contact-bg {
@@ -478,16 +484,16 @@ section{
   position: relative;
   background-image: url(/images/clouds.jpg);
   height: 100vh;
-  justify-content: center;
   background-repeat: no-repeat;
   padding: 5%;
+  justify-content: center;
+  align-items: center;
 }
 
-.text{  
+.text{
+  position: absolute;
   text-align: center;
-  align-items: center;
-  transform: translateX(-35%);
-  padding-top: 40vh;
+  padding: 1rem;
 }
 
 .text #amyo{
@@ -528,7 +534,12 @@ section{
 
   .dashed-border {
    width: 100%;
-   max-width: 320px;
+   max-width: 1280px;
+  }
+
+  .dashed-border-two{
+    width: 100%;
+    max-width: 500px;
   }
   
   #space{
@@ -541,7 +552,7 @@ section{
     padding: 5vh;
   }
 
-  div.dashed-border {
+  div.dashed-border, div.dashed-border-two {
     background-color: red;
     background-image: linear-gradient(90deg, yellow 50%, red 50%), linear-gradient(90deg, yellow 50%, red 50%), linear-gradient(0, yellow 50%, red 50%), linear-gradient(0, yellow 50%, red 50%);
     background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
@@ -549,7 +560,7 @@ section{
     animation: marching-ants 700ms infinite linear;
   }
   
-  p.dashed-border{
+  p.dashed-border, p.dashed-border-two{
     justify-content: center;
   }
 
