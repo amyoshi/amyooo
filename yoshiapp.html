@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Yoshi Photo App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <h1>YoshiPhotoApp</h1>
+    <section>
+      <h2>Yoshi Photos</h2>
+      <p>See more <a target="_blank" href="https://freecatphotoapp.com">Yoshi photos</a> in our gallery.</p>
+      <img src="https://mario.wiki.gallery/images/3/34/Yoshi_24.jpg" alt="Yoshi busting out of an egg.">
+    </section>
+    <section>
+      <h2>Yoshi Lists</h2>
+      <h3>Things Yoshis love:</h3>
+      <ul>
+        <li>fruit</li>
+        <li>lasagna</li>
+        <li>Birdo</li>
+      </ul>
+      <figure>
+        <img src="https://mario.wiki.gallery/images/1/1c/YSfruit.png" alt="Six various fruits from Yoshi's Island.">
+        <figcaption>Yoshis <em>love</em> fruit.</figcaption>
+      </figure>
+      <h3>Top 3 things Yoshis hate:</h3>
+      <ol>
+        <li>tight boots</li>
+        <li>kale</li>
+        <li>Bowser</li>
+      </ol>
+      <figure><img src="https://mario.wiki.gallery/images/5/5e/YI_Artwork_Yoshis.png"
+          alt="Eight Yoshis is various colors.">
+        <figcaption>Yoshis come in a <strong>variety</strong> of cool colors!</figcaption>
+      </figure>
+    </section>
+    <section>
+      <h2>Yoshi Form</h2>
+      <!-- uses FormSubmit endpoint -->
+      <form action="https://formsubmit.co/amyonwoo@gmail.com" method="POST" enctype="multipart/form-data">
+        <fieldset>
+          <legend>What color is your Yoshi?</legend>
+          <input type="hidden" name="_next" value="https://amyooo.com/thanks.html">
+          <input type="hidden" name="_subject" value="New Yoshi submission!">
+          <label><input checked type="radio" name="yoshi-color" value="green" id="green">Green</label>
+          <label><input type="radio" name="yoshi-color" value="red" id="red">Red</label>
+          <label><input type="radio" name="yoshi-color" value="yellow" id="yellow">Yellow</label>
+          <label><input type="radio" name="yoshi-color" value="orange" id="orange">Orange</label>
+          <label><input type="radio" name="yoshi-color" value="light-blue" id="light-blue">Light Blue</label>
+          <label><input type="radio" name="yoshi-color" value="blue" id="blue">Blue</label>
+          <label><input type="radio" name="yoshi-color" value="pink" id="pink">Pink</label>
+          <label><input type="radio" name="yoshi-color" value="purple" id="purple">Purple</label>
+          <label><input type="radio" name="yoshi-color" value="white" id="white">White</label>
+          <label><input type="radio" name="yoshi-color" value="black" id="black">Black</label>
+          <label><input type="radio" name="yoshi-color" value="brown" id="brown">Brown</label>
+        </fieldset>
+        <fieldset>
+          <legend>What's your Yoshi's personality?</legend>
+          <input checked name="personality" type="checkbox" value="loving" id="loving"><label
+            for="loving">Loving</label>
+          <input name="personality" type="checkbox" value="lazy" id="lazy"><label for="lazy">Lazy</label>
+          <input value="energetic" id="energetic" type="checkbox" name="personality"><label
+            for="energetic">Energetic</label>
+          <input value="loyal" id="loyal" type="checkbox" name="personality"><label for="loyal">Loyal</label>
+          <input value="brave" id="brave" type="checkbox" name="personality"><label for="brave">Brave</label>
+          <input value="trusting" id="trusting" type="checkbox" name="personality"><label
+            for="trusting">Trusting</label>
+          <input value="curious" id="curious" type="checkbox" name="personality"><label for="curious">Curious</label>
+          <input value="enthusiastic" id="enthusiastic" type="checkbox" name="personality"><label
+            for="enthusiastic">Enthusiastic</label>
+          <input value="helpful" id="helpful" type="checkbox" name="personality"><label for="helpful">Helpful</label>
+        </fieldset>
+        <label for="img"></br>Upload an image / drawing
+          of your Yoshi: </label></br><input required type="file" name="attachment" accept="image/png, image/jpeg">
+        </br>
+        <label for="email"></br>Optional: Enter your email if you'd like positive feedback on your precious Yoshi
+        </label><input type="email" name="email" placeholder="Email Address">
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>Amy O - <a href="http://amyooo.com">Visit my site ☺</a></p>
+  </footer>
+</body>
+
+</html>

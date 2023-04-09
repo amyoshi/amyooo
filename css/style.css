@@ -19,7 +19,7 @@ a:hover{
 }
 
 :root {
-  --background: url(/images/green-bg.jpg);
+  --background: url(/images/pink-bg.jpg);
 }
 
 * {
@@ -239,11 +239,6 @@ span{
   color: white;
 }
 
-.programming-img #computer {
-  max-width: 90%;
-  height: auto; 
-}
-
 #music-img {
   display: flex;
   width: 100%;
@@ -374,9 +369,8 @@ section{
 
 #video-bg,
 #video-bg-1,
-#blog-bg,
+#code-bg,
 #loops-bg,
-#programming-bg,
 #bio-bg,
 #photos-bg,
 #contact-bg{
@@ -391,7 +385,7 @@ section{
     url(/images/IMG_1762.JPG);
 }
 
-#blog-bg {
+#code-bg {
   background-image: linear-gradient(rgba(255, 255, 255, 0.75),
       rgba(255, 255, 255, 0.75)),
     url(/images/IMG_1757.JPG);
@@ -401,12 +395,6 @@ section{
   background-image: linear-gradient(rgba(255, 255, 255, 0.75),
       rgba(255, 255, 255, 0.75)),
     url(/images/IMG_1764.JPG);
-}
-
-#programming-bg {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.75),
-      rgba(255, 255, 255, 0.75)),
-    url(/images/IMG_1760.jpg);
 }
 
 #bio-bg {
@@ -496,12 +484,16 @@ section{
   padding: 1rem;
 }
 
-.text #amyo{
+h2{
+display: inline;
+}
+
+#amyo{
   animation: color-change 15s infinite;
 }
 
 .favicons {
-  position: absolute;
+  position: relative;
   bottom: 0;
   display: flex;
   flex-direction: row;
@@ -510,9 +502,6 @@ section{
   transform: translateX(-50%);
 }
 
-.favicons img{
-  padding: 1vw;
-}
  
   @keyframes marching-ants {
     0% {
@@ -552,14 +541,30 @@ section{
     padding: 5vh;
   }
 
-  div.dashed-border, div.dashed-border-two {
-    background-color: red;
-    background-image: linear-gradient(90deg, yellow 50%, red 50%), linear-gradient(90deg, yellow 50%, red 50%), linear-gradient(0, yellow 50%, red 50%), linear-gradient(0, yellow 50%, red 50%);
-    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
-    background-size: 50px 5px, 50px 5px, 5px 50px, 5px 50px;
-    animation: marching-ants 700ms infinite linear;
+  div.dashed-border-one {
+    background-color: #4086f4;
+    width: 75vw; 
+    max-width: 800px;
+  }
+
+  div.dashed-border-two{
+    background-color: #dc4234;
+    width: 75vw; 
+    max-width: 800px;
   }
   
+div.dashed-border-three{
+  background-color: #f4b500;
+  width: 75vw; 
+  max-width: 800px;
+}
+
+div.dashed-border-four{
+  background-color: #069e57;
+  width: 75vw; 
+  max-width: 800px;
+}
+
   p.dashed-border, p.dashed-border-two{
     justify-content: center;
   }
@@ -892,4 +897,9 @@ body {
     display: flex;
     flex-direction: column;
   }
+}
+
+footer{
+  background: var(--background);
+  padding: 1.5rem;
 }

@@ -1,0 +1,36 @@
+.container-1, .container-2, .container-3{
+  border: 1px solid black;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.flex-box-container-1, .flex-box-container-2, .flex-box-rps {
+display: flex; /* creates flex */
+border: 1px solid black;
+padding: 10px;
+flex-wrap: wrap; /* keeps imgs in the flexbox */
+flex-direction: row;
+justify-content: space-around;
+}
+
+.flex-box-container-1 div{
+  display: flex; /* creates flexbox */
+  padding: 10px;
+  align-items: center;
+}
+
+.flex-box-container-2 img{
+ margin: 10px;
+}
+
+.flex-box-rps img:hover{
+  box-shadow: 7px 7px 5px 0px rgba(180, 0, 0, 0.75);
+}
+
+.flex-box-rps img{
+  margin: 40px;
+}
+
+
+/* style flex-box-rps divs */ 

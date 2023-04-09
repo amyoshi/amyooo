@@ -35,9 +35,8 @@
         <a href="/index.html"><img src="/images/amyocolour.png" alt="aMy O" class="logo"></a>
         <a href="/loops.html" class="nav-button">loops</a>
         <a href="/video.html" class="nav-button">video</a>
-        <a href="/blog.html" class="nav-button">blog</a>
-        <a href="/photos.html" class="nav-button">photos</a>
-        <a class="nav-button" onclick="contact()">contact</a>
+        <a href="/code.html" class="nav-button">code</a>
+        <a href="http://amyo.123Guestbook.com/" target="_blank" class="nav-button">guestbook</a>
       </span>
     </nav>
 
@@ -51,9 +50,8 @@
       <ul class="mobile-menu">
         <li><a href="/loops.html" class="nav-button">LOOPS</a></li>
         <li><a href="/video.html" class="nav-button">VIDEO</a></li>
-        <li><a href="/blog.html" class="nav-button">BLOG</a></li>
-        <li><a href="/photos.html" class="nav-button">PHOTOS</a></li>
-        <li><a class="nav-button" onclick="contact()">CONTACT</a></li>
+        <li><a href="/code.html" class="nav-button">CODE</a></li>
+        <li><a href="http://amyo.123Guestbook.com/" class="nav-button" target="_blank">GUESTBOOK</a></li> 
       </ul>
     </div>
   </header>
@@ -72,56 +70,60 @@
       <div class="section-inner">
 
         <!-- loops slider -->
-        <div class="dashed-border">
+        <div class="dashed-border-one">
           <p id="title"><strong>LATEST LOOPS</strong></p>
         </div>
         <div id="space"></div>
-        <div id="carouselLoopIndicators" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselLoopIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselLoopIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselLoopIndicators" data-slide-to="2"></li>
-            <li data-target="#carouselLoopIndicators" data-slide-to="3"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <a href="https://youtu.be/ohgsrgYvNys">
-                <img class="d-block w-100" src="/images/thumbnails/aeiou.jpg" alt="First slide">
+
+        <div carouselOne>
+          <div id="carouselLoopIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselLoopIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselLoopIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselLoopIndicators" data-slide-to="2"></li>
+              <li data-target="#carouselLoopIndicators" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <a href="https://youtu.be/ohgsrgYvNys">
+                  <img class="d-block w-100" src="/images/thumbnails/aeiou.jpg" alt="First slide" style="width: 75vw; max-width: 800px;">
+              </div>
+              </a>
+              <div class="carousel-item">
+                <a href="https://youtu.be/1I3O1Z4rbHw">
+                  <img class="d-block w-100" src="/images/thumbnails/stahhh.jpg" alt="Second slide" style="width: 75vw; max-width: 800px;">
+              </div>
+              </a>
+              <div class="carousel-item">
+                <a href="https://youtu.be/CDYjcAm0aEE">
+                  <img class="d-block w-100" src="/images/thumbnails/turnofflites.jpg" alt="Third slide" style="width: 75vw; max-width: 800px;">
+              </div>
+              </a>
+              <div class="carousel-item">
+                <a href="https://youtu.be/JPkfzmDr5VU">
+                  <img class="d-block w-100" src="/images/thumbnails/pure.jpg" alt="Fourth slide" style="width: 75vw; max-width: 800px;">
+              </div>
+              </a>
+              </a>
             </div>
+            <a class="carousel-control-prev" href="#carouselLoopIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
             </a>
-            <div class="carousel-item">
-              <a href="https://youtu.be/1I3O1Z4rbHw">
-                <img class="d-block w-100" src="/images/thumbnails/stahhh.jpg" alt="Second slide">
-            </div>
-            </a>
-            <div class="carousel-item">
-              <a href="https://youtu.be/CDYjcAm0aEE">
-                <img class="d-block w-100" src="/images/thumbnails/turnofflites.jpg" alt="Third slide">
-            </div>
-            </a>
-            <div class="carousel-item">
-              <a href="https://youtu.be/JPkfzmDr5VU">
-                <img class="d-block w-100" src="/images/thumbnails/pure.jpg" alt="Fourth slide">
-            </div>
-            </a>
+            <a class="carousel-control-next" href="#carouselLoopIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
             </a>
           </div>
-          <a class="carousel-control-prev" href="#carouselLoopIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselLoopIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
         </div>
+
         <div id="space"></div>
         <button class="my-button" onclick="window.open('http://youtube.com/@amyo/videos');">
           VIEW MORE
         </button>
 
         <div id="space-two"></div>
-        <div class="dashed-border">
+        <div class="dashed-border-two">
           <p id="title"><strong>DRUM CHUM</strong></p>
         </div>
         <div id="space"></div>
@@ -135,22 +137,22 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <a href="https://youtu.be/wvt3dfVXBFs">
-                <img class="d-block w-100" src="/images/thumbnails/drumchum/paradise.jpg" alt="First slide">
+                <img class="d-block w-100" src="/images/thumbnails/drumchum/paradise.jpg" alt="First slide" style="width: 75vw; max-width: 800px";>
             </div>
             </a>
             <div class="carousel-item">
               <a href="https://youtu.be/xDmnLjc0cuM">
-                <img class="d-block w-100" src="/images/thumbnails/drumchum/come2.jpg" alt="Second slide">
+                <img class="d-block w-100" src="/images/thumbnails/drumchum/come2.jpg" alt="Second slide" style="width: 75vw; max-width: 800px;">
             </div>
             </a>
             <div class="carousel-item">
               <a href="https://youtu.be/CZ1au4jTu0I">
-                <img class="d-block w-100" src="/images/thumbnails/drumchum/typebeat.jpg" alt="Third slide">
+                <img class="d-block w-100" src="/images/thumbnails/drumchum/typebeat.jpg" alt="Third slide" style="width: 75vw; max-width: 800px;">
             </div>
             </a>
             <div class="carousel-item">
               <a href="https://youtu.be/PoSZlZBPhII">
-                <img class="d-block w-100" src="/images/thumbnails/drumchum/bestkoast.jpg" alt="Fourth slide">
+                <img class="d-block w-100" src="/images/thumbnails/drumchum/bestkoast.jpg" alt="Fourth slide" style="width: 75vw; max-width: 800px;">
             </div>
             </a>
 
@@ -168,7 +170,7 @@
         <button class="my-button" onclick="window.open('http://youtube.com/@amyodrums/videos');">VIEW MORE</button>
 
         <div id="space-two"></div>
-        <div class="dashed-border">
+        <div class="dashed-border-three">
           <p id="title"><strong>BASS FACE</strong></p>
         </div>
         <div id="space"></div>
@@ -182,22 +184,22 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <a href="https://youtu.be/b5Pdh-iQ1Ps">
-                <img class="d-block w-100" src="/images/thumbnails/bassface/ifeelalive.jpg" alt="First slide">
+                <img class="d-block w-100" src="/images/thumbnails/bassface/ifeelalive.jpg" alt="First slide" style="width: 75vw; max-width: 800px;">
             </div>
             </a>
             <div class="carousel-item">
               <a href="https://youtu.be/0zfEbEoTBGg">
-                <img class="d-block w-100" src="/images/thumbnails/bassface/rose4u.jpg" alt="Second slide">
+                <img class="d-block w-100" src="/images/thumbnails/bassface/rose4u.jpg" alt="Second slide" style="width: 75vw; max-width: 800px;">
             </div>
             </a>
             <div class="carousel-item">
               <a href="https://youtu.be/A801HAoUgzA">
-                <img class="d-block w-100" src="/images/thumbnails/bassface/fruntin.jpg" alt="Third slide">
+                <img class="d-block w-100" src="/images/thumbnails/bassface/fruntin.jpg" alt="Third slide" style="width: 75vw; max-width: 800px;">
             </div>
             </a>
             <div class="carousel-item">
               <a href="https://youtu.be/u2HK4d5FB_0">
-                <img class="d-block w-100" src="/images/thumbnails/bassface/thinkurgonna.jpg" alt="Fourth slide">
+                <img class="d-block w-100" src="/images/thumbnails/bassface/thinkurgonna.jpg" alt="Fourth slide" style="width: 75vw; max-width: 800px;">
             </div>
             </a>
 
@@ -228,20 +230,16 @@
           <script src="https://apis.google.com/js/platform.js"></script>
         </div>
 
-    </section>
-
-    <main>
-      <!-------------------- Music section ----------------------->
-      <section id="blog-bg">
-        <div class="section-inner">
-          <h1>Blog section under construction</h1>
+        <script src="https://apis.google.com/js/platform.js"></script>
+        <div class="g-ytsubscribe" data-channelid="UCVBH91ZhfDBUsfMMNsWc_2g" data-layout="full" data-count="default">
         </div>
-      </section>
 
+    </section>
+    <main>
       <!-------------------- Loops section ----------------------->
       <section id="loops-bg">
         <div class="section-inner">
-          <div class="dashed-border-two">
+          <div class="dashed-border-four">
             <p id="title"><strong>Amy O's Demo</strong></p>
           </div>
           <div id="space"></div>
@@ -254,7 +252,7 @@
 
           <div id="space-two"></div>
           <div class="audio-container">
-            <div class="dashed-border">
+            <div class="dashed-border-one">
               <p id="title"><strong>LOST TRACK! 13 Vices - Real Like You (AMY O ON DRUMS) </p></strong>
             </div>
             <audio controls>
@@ -264,53 +262,31 @@
         </div>
         </div>
       </section>
-      <!----------------- Programming section -------------------->
-      <section id="programming-bg">
-        <div class="section-inner">
-          <div class="programming-img">
-            <a href="https://github.com/amyoshi">
-              <img id="computer" src="/images/1480688.png" />
-            </a>
-          </div>
-          <strong>Click the computer to check out my GitHub</strong>
-        </div>
-      </section>
-
-      <div id="contact-bg">
-
-        <div class="favicons">
-          <div id="gmail">
-            <a href="mailto:amyonwoo@gmail.com"><img src="/images/gmail-logo-100.png" /></a>
-          </div>
-          <div id="instagram">
-            <a href="http://instagram.com/amy.ooooo"><img src="/images/instagram-old-100.png" /></a>
-          </div>
-          <div id="youtube">
-            <a href="http://youtube.com/@amyo"><img src="/images/youtube-logo-100.png" /><a>
-          </div>
-        </div>
-        <div class="plane">
-          <a href="http://amyo.123Guestbook.com/" target="aMy O's Guestbook">
-            <img id="plane" src="/images/guestbookairplane.png" alt="" />
-          </a>
-        </div>
-        <div class="text"><strong>Pardon my cyberdust! This site is still being developed by </strong> <strong
-            id="amyo">Amy O.</strong><strong> Thank you for visiting! Check back often for updates.</strong>
-          <div class="yoshi"><img src="/images/yoshi.gif"></div>
-        </div>
-      </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-      </script>
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-      </script>
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-      </script>
-
+    </script>
 </body>
-
-
+<footer>
+  <h2>Who is </h2> <h2 id="amyo">aMy O</h2><h2>???</h2>
+<p style="text-align: center;">Hi! I'm a musician, drummer, skateboarder, software developer, actor, video artist and editor, lifelong learner based out of Atlanta, GA. I'm passionate about hanging out between pursuing my interests in the most ME way I can and finding ways to fuse my interests into an eccentric, creative conglomerate. Interested in working with me?Have any loop requests? Or just want to grab boba and hang out? Hit me up! </p>
+<div class="favicons">
+  <div id="yoshi"><img src="/images/yoshi.gif"></div>
+  <div id="gmail">
+    <a href="mailto:amyonwoo@gmail.com"><img src="/images/gmail-logo-100.png" /></a>
+  </div>
+  <div id="instagram">
+    <a href="http://instagram.com/amy.ooooo"><img src="/images/instagram-old-100.png" /></a>
+  </div>
+  <div id="youtube">
+    <a href="http://youtube.com/@amyo"><img src="/images/youtube-logo-100.png" /><a>
+  </div>
+</div>
+</footer>
 </html>
