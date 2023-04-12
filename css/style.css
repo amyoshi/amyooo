@@ -10,7 +10,9 @@
 }
 
 strong,
-p {
+p,
+h1,
+h2 {
   font-family: "Nunito", sans-serif;
 }
 
@@ -26,11 +28,6 @@ a:hover{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-.logo{
-  height: 9vh;
- 
 }
 
 button {
@@ -443,15 +440,15 @@ section{
 
 .logo {
   display: flex;
-  max-width: 140px;
+  max-width: 200px;
   height: auto;
   vertical-align: middle;
-  
+  height: 9vh;
+  float: left;
 }
 
 #contact-info {
   display: flex;
- 
 }
 
 .plane{
@@ -490,6 +487,7 @@ display: inline;
 
 #amyo{
   animation: color-change 15s infinite;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
 .favicons {
@@ -802,27 +800,32 @@ div.dashed-border-four{
 }
 
 @keyframes color-change {
-  0% { color: rgb(255, 0, 0); }
-  5%{color: rgb(134, 15, 15);}
-  10%{color: rgb(175, 58, 0)}
-  15% { color: rgb(209, 141, 15); }
-  20% { color: rgb(224, 209, 9); }
-  25% {color: rgb(255, 240, 25)}
-  30% {color: rgb(199, 224, 7); }
-  35% {color: #49ff01;}
-  40% {color: rgb(1, 178, 69) }
-  45% {color: rgb(8, 165, 205) }
-  50% {color: rgb(62, 167, 247); }
-  55% {color:rgb(55, 70, 239)}
-  60% { color: rgb(11, 0, 223); }
-  65% {color: rgb(50, 40, 160);}
-  70% { color: rgb(51, 22, 140); }
-  75% {color: rgb(118, 41, 212);}
-  80% { color: rgb(159, 85, 229); }
-  85% {color: rgb(185, 13, 237);}
-  90% {color: rgb(217, 61, 223); }
-  95% {color: rgb(209, 31, 114);}
-  100% {color: rgb(238, 51, 79); }
+  2% { color: #ff0000;}
+  4%{color: #ff2b00;}
+  8%{color: #ff5900;}
+  12% { color: #ffae00;}
+  16% {color: #ffdd00;}
+  20% {color: #f7ff00;}
+  24% {color: #9dff00;}
+  28% {color: #73ff00;}
+  32% {color: #48ff00;}
+  36% { color: #00ff11;}
+  40% {color: #00ff3c;}
+  44% { color: #00ff6a;}
+  48% { color: #00ffc4;}
+  52% {color: #00ffee;}
+  56% {color: #00e6ff; }
+  60% {color: #008cff;}
+  64% {color: #0062ff;}
+  68% {color: #0033ff;}
+  72% {color: #2200ff;}
+  76% {color: #5100ff;}
+  80% {color: #7b00ff;}
+  84% {color: #cb57e2;}
+  88% {color: #a94cbb;}
+  92% {color: #8f2aa3;}
+  96% {color: #741887;}
+  100% {color: #4a014a;}
 }
 
 .yt-channels{
@@ -900,6 +903,15 @@ body {
 }
 
 footer{
+  font-family: "Nunito", sans-serif;
   background: var(--background);
   padding: 1.5rem;
+}
+
+#footer-title{
+  text-align: center;
+}
+
+.footer-text{
+  padding: 1.2rem 1.4rem;
 }
