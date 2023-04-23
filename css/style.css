@@ -21,7 +21,7 @@ a:hover{
 }
 
 :root {
-  --background: url(/images/pink-bg.jpg);
+  --background: url(/images/backgrounds/pink-bg.jpg);
 }
 
 * {
@@ -379,19 +379,19 @@ section{
 #video-bg, #video-bg-1 {
   background-image: linear-gradient(rgba(255, 255, 255, 0.75),
       rgba(255, 255, 255, 0.75)),
-    url(/images/IMG_1762.JPG);
+    url(/images/backgrounds/squares.JPG);
 }
 
 #code-bg {
   background-image: linear-gradient(rgba(255, 255, 255, 0.75),
       rgba(255, 255, 255, 0.75)),
-    url(/images/IMG_1757.JPG);
+    url(/images/backgrounds/purplecircles.JPG);
 }
 
 #loops-bg {
   background-image: linear-gradient(rgba(255, 255, 255, 0.75),
       rgba(255, 255, 255, 0.75)),
-    url(/images/IMG_1764.JPG);
+    url(/images/backgrounds/bluebolts.JPG);
 }
 
 #bio-bg {
@@ -405,13 +405,6 @@ section{
       rgba(255, 255, 255, 0.75)),
     url(/images/Imagen7.jpg);
 }
-
-#loops-bg{
-  background-image: linear-gradient(rgba(255, 255, 255, 0.75),
-   rgba(255, 255, 255, 0.75)),
-   url(/images/loopbg.jpg);
-}
-
 
 #preloader-bg {
   background: #20c02f;
@@ -541,25 +534,25 @@ display: inline;
 
   div.dashed-border-one {
     background-color: #4086f4;
-    width: 75vw; 
+    width: 80vw; 
     max-width: 800px;
   }
 
   div.dashed-border-two{
     background-color: #dc4234;
-    width: 75vw; 
+    width: 80vw; 
     max-width: 800px;
   }
   
 div.dashed-border-three{
   background-color: #f4b500;
-  width: 75vw; 
+  width: 80vw; 
   max-width: 800px;
 }
 
 div.dashed-border-four{
   background-color: #069e57;
-  width: 75vw; 
+  width: 52.3vw; 
   max-width: 800px;
 }
 
