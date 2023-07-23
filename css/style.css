@@ -21,7 +21,7 @@ a:hover{
 }
 
 :root {
-  --background: url(/images/backgrounds/pink-bg.jpg);
+  --background: url(/images/pink-bg.jpg);
 }
 
 * {
@@ -340,10 +340,12 @@ section{
 
 #left {
   left: 0;
+  border-right: 2px solid #000000;
 }
 
 #right {
   right: 0;
+  border-left: 2px solid #000000;
 }
 
 #top,
@@ -355,20 +357,22 @@ section{
 #top {
   top: 0;
   height: 10vh;
+  border-bottom: 2px solid #000000;
+  
 }
 
 #bottom {
   bottom: 0;
   height: 2vh;
+  border-top: 2px solid #000000;
 }
 
 /*==========================================*/
 
 #video-bg,
 #video-bg-1,
-#code-bg,
+#projects-bg,
 #loops-bg,
-#bio-bg,
 #photos-bg,
 #contact-bg{
   background-size: cover;
@@ -379,25 +383,19 @@ section{
 #video-bg, #video-bg-1 {
   background-image: linear-gradient(rgba(255, 255, 255, 0.75),
       rgba(255, 255, 255, 0.75)),
-    url(/images/backgrounds/squares.JPG);
+    url(/images/zigzag.jpg);
 }
 
-#code-bg {
+#projects-bg {
   background-image: linear-gradient(rgba(255, 255, 255, 0.75),
       rgba(255, 255, 255, 0.75)),
-    url(/images/backgrounds/purplecircles.JPG);
+    url(/images/purplecircles.JPG);
 }
 
 #loops-bg {
   background-image: linear-gradient(rgba(255, 255, 255, 0.75),
       rgba(255, 255, 255, 0.75)),
-    url(/images/backgrounds/bluebolts.JPG);
-}
-
-#bio-bg {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.75),
-      rgba(255, 255, 255, 0.75)),
-    url(/images/IMG_1768.jpg);
+    url(/images/bluebolts.JPG);
 }
 
 #photos-bg {
