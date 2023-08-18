@@ -386,6 +386,20 @@ section{
     url(/images/zigzag.jpg);
 }
 
+section #video-bg {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#video-bg video{
+  width: 60%;
+}
+
+#video-bg p{
+  width: 25%;
+  
+}
+
 #projects-bg {
   background-image: linear-gradient(rgba(255, 255, 255, 0.75),
       rgba(255, 255, 255, 0.75)),
@@ -431,10 +445,9 @@ section{
 
 .logo {
   display: flex;
-  max-width: 200px;
   height: auto;
   vertical-align: middle;
-  height: 9vh;
+  height: 6.1vh;
   float: left;
 }
 
@@ -567,8 +580,14 @@ div.dashed-border-four{
   flex-direction: column;
 }
 
-.section-inner-video{
-  flex-direction: column;
+#video-bg video{
+  display: flex;
+  height: auto;
+  border: #0033ff 2px solid;
+}
+
+#video-bg p{
+  margin: 0 auto;
 }
 
 .yt-channels{
@@ -863,17 +882,6 @@ div.dashed-border-four{
   height: auto;
 }
 
-#video-bg {
-  /* Prevent vertical gaps */
-  line-height: 0;
-  -webkit-column-count: 5;
-  -webkit-column-gap:   0px;
-  -moz-column-count:    5;
-  -moz-column-gap:      0px;
-  column-count:         5;
-  column-gap:           0px;
-}
-
 #video-bg img {
  /* Just in case there are inline attributes */
  width: 100% !important;
@@ -905,4 +913,56 @@ footer{
 
 .footer-text{
   padding: 1.2rem 1.4rem;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.gallery .project img{
+  max-width: 25vw;
+  height: auto;
+}
+
+.gallery .project{
+  align-self: center;
+}
+
+.item1 { grid-area: project1; }
+.item2 { grid-area: blurb1; }
+.item3 { grid-area: project2; }
+.item4 { grid-area: blurb2; }
+.item5 { grid-area: project3; }
+.item6 { grid-area: blurb3; }
+.item7 { grid-area: project4; }
+.item8 { grid-area: blurb4; }
+.item9 { grid-area:p project5; }
+.item10 { grid-area: blurb5; }
+
+
+.gallery {
+  display: grid;
+  align-self: center;
+  text-align: center;
+  grid-template-areas: 'project1 project2 project3'
+  'blurb1 blurb2 blurb3'
+  'project4 project5 project6'
+  'blurb4 blurb5 blurb6'
+}
+
+.grid-item, .grid-item p{
+  
+}
+
+.grid-item{
+  display: flex;
+  border: #ff0095 3px solid;
+}
+
+#earth{
+  max-width: 50px;
+  height: auto;
 }
