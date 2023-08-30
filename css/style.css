@@ -386,20 +386,6 @@ section{
     url(/images/zigzag.jpg);
 }
 
-section #video-bg {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#video-bg video{
-  width: 60%;
-}
-
-#video-bg p{
-  width: 25%;
-  
-}
-
 #projects-bg {
   background-image: linear-gradient(rgba(255, 255, 255, 0.75),
       rgba(255, 255, 255, 0.75)),
@@ -580,11 +566,7 @@ div.dashed-border-four{
   flex-direction: column;
 }
 
-#video-bg video{
-  display: flex;
-  height: auto;
-  border: #0033ff 2px solid;
-}
+
 
 #video-bg p{
   margin: 0 auto;
@@ -843,6 +825,20 @@ div.dashed-border-four{
   padding: 2%;
 }
 
+section #video-bg{
+  height: 100vh;
+}
+
+main #video-bg video{
+  width: 65%;
+  margin: 0 auto;
+  float: left;
+  padding: 2vh;
+ }
+
+
+/* RESPONSIVE STYLINGS */
+
 /* when screen width is < 1000px, nav vanishes and hamburger menu shown instead */
 
 @media only screen and (max-width: 1000px) {
@@ -874,7 +870,23 @@ div.dashed-border-four{
     display: block;
     position: relative;
   }
-  
+
+  main #video-bg p i {
+    text-align: center;
+  }
+
+main #video-bg{
+  display: flex;
+  flex-direction: column;
+ }
+
+ main #video-bg video{
+  margin: 0 auto;
+  width: 85%;
+  height: auto;
+  padding-top: 10vh;
+ }
+ 
 }
 
 .carousel-item img{
@@ -899,7 +911,9 @@ body {
     display: flex;
     flex-direction: column;
   }
-}
+
+  }
+  
 
 footer{
   font-family: "Nunito", sans-serif;
@@ -953,10 +967,6 @@ footer{
   'blurb4 blurb5 blurb6'
 }
 
-.grid-item, .grid-item p{
-  
-}
-
 .grid-item{
   display: flex;
   border: #ff0095 3px solid;
@@ -966,3 +976,9 @@ footer{
   max-width: 50px;
   height: auto;
 }
+
+ #video-bg p{
+  margin-top: 1.2em;
+ }
+
+ 
